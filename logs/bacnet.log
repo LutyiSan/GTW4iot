@@ -1,0 +1,2903 @@
+2022-07-29 at 12:59:18 | ERROR | FAIL create bacnet-client
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 34, in <module>
+    run()
+    └ <function run at 0x00000209CBB33E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 28, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000209DE3D7010>
+    └ <__main__.GTW object at 0x00000209CC097AF0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 15, in run_bacnet
+    self.bacnet.create(HOST_IP, HOST_PORT)
+    │    │      │      │        └ 47808
+    │    │      │      └ '10.10.10.10'
+    │    │      └ <function BACnetClient.create at 0x00000209CC0C93F0>
+    │    └ <BACnet.BACnetClient object at 0x00000209DE2AF2B0>
+    └ <__main__.GTW object at 0x00000209CC097AF0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 17, in create
+    self.client = BAC0.lite(ip=self.ip_address, port=self.port)
+    │    │        │    │       │    │                │    └ 47808
+    │    │        │    │       │    │                └ <BACnet.BACnetClient object at 0x00000209DE2AF2B0>
+    │    │        │    │       │    └ '10.10.10.10'
+    │    │        │    │       └ <BACnet.BACnetClient object at 0x00000209DE2AF2B0>
+    │    │        │    └ <class 'BAC0.scripts.Lite.Lite'>
+    │    │        └ <module 'BAC0' from 'C:\\Users\\lutyisan\\PycharmProjects\\BACnetMQTT\\venv\\lib\\site-packages\\BAC0\\__init__.py'>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000209DE2AF2B0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\scripts\Lite.py", line 152, in __init__
+    Base.__init__(
+    │    └ <function Base.__init__ at 0x00000209DE04E680>
+    └ <class 'BAC0.scripts.Base.Base'>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\scripts\Base.py", line 143, in __init__
+    raise InitializationError(
+          └ <class 'BAC0.core.io.IOExceptions.InitializationError'>
+
+BAC0.core.io.IOExceptions.InitializationError: IP Address provided (10.10.10.10) invalid. Check if another software is using port 47808 on this network interface. If so, you can define multiple IP per interface. Or specify another IP using BAC0.lite(ip='IP/mask')
+2022-07-29 at 13:00:21 | ERROR | FAIL create bacnet-client
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 34, in <module>
+    run()
+    └ <function run at 0x000001DF09A93E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 28, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x000001DF1C3C7130>
+    └ <__main__.GTW object at 0x000001DF1C2AD030>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 15, in run_bacnet
+    self.bacnet.create(HOST_IP, HOST_PORT)
+    │    │      │      │        └ 47808
+    │    │      │      └ '10.10.10.10'
+    │    │      └ <function BACnetClient.create at 0x000001DF0A0292D0>
+    │    └ <BACnet.BACnetClient object at 0x000001DF1C30A770>
+    └ <__main__.GTW object at 0x000001DF1C2AD030>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 17, in create
+    self.client = BAC0.lite(ip=self.ip_address, port=self.port)
+    │    │        │    │       │    │                │    └ 47808
+    │    │        │    │       │    │                └ <BACnet.BACnetClient object at 0x000001DF1C30A770>
+    │    │        │    │       │    └ '10.10.10.10'
+    │    │        │    │       └ <BACnet.BACnetClient object at 0x000001DF1C30A770>
+    │    │        │    └ <class 'BAC0.scripts.Lite.Lite'>
+    │    │        └ <module 'BAC0' from 'C:\\Users\\lutyisan\\PycharmProjects\\BACnetMQTT\\venv\\lib\\site-packages\\BAC0\\__init__.py'>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x000001DF1C30A770>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\scripts\Lite.py", line 152, in __init__
+    Base.__init__(
+    │    └ <function Base.__init__ at 0x000001DF1C04E710>
+    └ <class 'BAC0.scripts.Base.Base'>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\scripts\Base.py", line 143, in __init__
+    raise InitializationError(
+          └ <class 'BAC0.core.io.IOExceptions.InitializationError'>
+
+BAC0.core.io.IOExceptions.InitializationError: IP Address provided (10.10.10.10) invalid. Check if another software is using port 47808 on this network interface. If so, you can define multiple IP per interface. Or specify another IP using BAC0.lite(ip='IP/mask')
+2022-07-29 at 13:00:56 | ERROR | FAIL create bacnet-client
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 34, in <module>
+    run()
+    └ <function run at 0x000002233A733E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 28, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x000002234D067130>
+    └ <__main__.GTW object at 0x000002234CF4D030>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 15, in run_bacnet
+    self.bacnet.create(HOST_IP, HOST_PORT)
+    │    │      │      │        └ 47808
+    │    │      │      └ '10.168.253.150'
+    │    │      └ <function BACnetClient.create at 0x000002233ACC92D0>
+    │    └ <BACnet.BACnetClient object at 0x000002234CFA9CF0>
+    └ <__main__.GTW object at 0x000002234CF4D030>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 17, in create
+    self.client = BAC0.lite(ip=self.ip_address, port=self.port)
+    │    │        │    │       │    │                │    └ 47808
+    │    │        │    │       │    │                └ <BACnet.BACnetClient object at 0x000002234CFA9CF0>
+    │    │        │    │       │    └ '10.168.253.150'
+    │    │        │    │       └ <BACnet.BACnetClient object at 0x000002234CFA9CF0>
+    │    │        │    └ <class 'BAC0.scripts.Lite.Lite'>
+    │    │        └ <module 'BAC0' from 'C:\\Users\\lutyisan\\PycharmProjects\\BACnetMQTT\\venv\\lib\\site-packages\\BAC0\\__init__.py'>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x000002234CFA9CF0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\scripts\Lite.py", line 152, in __init__
+    Base.__init__(
+    │    └ <function Base.__init__ at 0x000002234CCEE710>
+    └ <class 'BAC0.scripts.Base.Base'>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\scripts\Base.py", line 143, in __init__
+    raise InitializationError(
+          └ <class 'BAC0.core.io.IOExceptions.InitializationError'>
+
+BAC0.core.io.IOExceptions.InitializationError: IP Address provided (10.168.253.150) invalid. Check if another software is using port 47808 on this network interface. If so, you can define multiple IP per interface. Or specify another IP using BAC0.lite(ip='IP/mask')
+2022-07-29 at 13:01:02 | ERROR | FAIL create bacnet-client
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 34, in <module>
+    run()
+    └ <function run at 0x0000018261F33E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 28, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000182747A7130>
+    └ <__main__.GTW object at 0x000001827468D030>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 15, in run_bacnet
+    self.bacnet.create(HOST_IP, HOST_PORT)
+    │    │      │      │        └ 47808
+    │    │      │      └ '10.168.253.150'
+    │    │      └ <function BACnetClient.create at 0x00000182624C92D0>
+    │    └ <BACnet.BACnetClient object at 0x00000182746EA860>
+    └ <__main__.GTW object at 0x000001827468D030>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 17, in create
+    self.client = BAC0.lite(ip=self.ip_address, port=self.port)
+    │    │        │    │       │    │                │    └ 47808
+    │    │        │    │       │    │                └ <BACnet.BACnetClient object at 0x00000182746EA860>
+    │    │        │    │       │    └ '10.168.253.150'
+    │    │        │    │       └ <BACnet.BACnetClient object at 0x00000182746EA860>
+    │    │        │    └ <class 'BAC0.scripts.Lite.Lite'>
+    │    │        └ <module 'BAC0' from 'C:\\Users\\lutyisan\\PycharmProjects\\BACnetMQTT\\venv\\lib\\site-packages\\BAC0\\__init__.py'>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000182746EA860>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\scripts\Lite.py", line 152, in __init__
+    Base.__init__(
+    │    └ <function Base.__init__ at 0x000001827442E710>
+    └ <class 'BAC0.scripts.Base.Base'>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\scripts\Base.py", line 143, in __init__
+    raise InitializationError(
+          └ <class 'BAC0.core.io.IOExceptions.InitializationError'>
+
+BAC0.core.io.IOExceptions.InitializationError: IP Address provided (10.168.253.150) invalid. Check if another software is using port 47808 on this network interface. If so, you can define multiple IP per interface. Or specify another IP using BAC0.lite(ip='IP/mask')
+2022-07-29 at 13:05:46 | ERROR | FAIL create bacnet-client
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 37, in <module>
+    run()
+    └ <function run at 0x000002343B443E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 31, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x000002344E0EB0A0>
+    └ <__main__.GTW object at 0x000002343BDE3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 15, in run_bacnet
+    state = self.bacnet.create(HOST_IP, HOST_PORT)
+            │    │      │      │        └ 47808
+            │    │      │      └ '10.168.253.150'
+            │    │      └ <function BACnetClient.create at 0x000002343BDB93F0>
+            │    └ <BACnet.BACnetClient object at 0x000002344E02A950>
+            └ <__main__.GTW object at 0x000002343BDE3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 17, in create
+    self.client = BAC0.lite(ip=self.ip_address, port=self.port)
+    │    │        │    │       │    │                │    └ 47808
+    │    │        │    │       │    │                └ <BACnet.BACnetClient object at 0x000002344E02A950>
+    │    │        │    │       │    └ '10.168.253.150'
+    │    │        │    │       └ <BACnet.BACnetClient object at 0x000002344E02A950>
+    │    │        │    └ <class 'BAC0.scripts.Lite.Lite'>
+    │    │        └ <module 'BAC0' from 'C:\\Users\\lutyisan\\PycharmProjects\\BACnetMQTT\\venv\\lib\\site-packages\\BAC0\\__init__.py'>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x000002344E02A950>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\scripts\Lite.py", line 152, in __init__
+    Base.__init__(
+    │    └ <function Base.__init__ at 0x000002344DD6E680>
+    └ <class 'BAC0.scripts.Base.Base'>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\scripts\Base.py", line 143, in __init__
+    raise InitializationError(
+          └ <class 'BAC0.core.io.IOExceptions.InitializationError'>
+
+BAC0.core.io.IOExceptions.InitializationError: IP Address provided (10.168.253.150) invalid. Check if another software is using port 47808 on this network interface. If so, you can define multiple IP per interface. Or specify another IP using BAC0.lite(ip='IP/mask')
+2022-07-29 at 13:10:40 | ERROR | FAIL create bacnet-client
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x0000021C1D523E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x0000021C301DF1C0>
+    └ <__main__.GTW object at 0x0000021C300BD180>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 15, in run_bacnet
+    state = self.bacnet.create(HOST_IP, HOST_PORT)
+            │    │      │      │        └ 47808
+            │    │      │      └ '10.168.253.150'
+            │    │      └ <function BACnetClient.create at 0x0000021C1DE192D0>
+            │    └ <BACnet.BACnetClient object at 0x0000021C3011A9B0>
+            └ <__main__.GTW object at 0x0000021C300BD180>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 17, in create
+    self.client = BAC0.lite(ip=self.ip_address, port=self.port)
+    │    │        │    │       │    │                │    └ 47808
+    │    │        │    │       │    │                └ <BACnet.BACnetClient object at 0x0000021C3011A9B0>
+    │    │        │    │       │    └ '10.168.253.150'
+    │    │        │    │       └ <BACnet.BACnetClient object at 0x0000021C3011A9B0>
+    │    │        │    └ <class 'BAC0.scripts.Lite.Lite'>
+    │    │        └ <module 'BAC0' from 'C:\\Users\\lutyisan\\PycharmProjects\\BACnetMQTT\\venv\\lib\\site-packages\\BAC0\\__init__.py'>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x0000021C3011A9B0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\scripts\Lite.py", line 152, in __init__
+    Base.__init__(
+    │    └ <function Base.__init__ at 0x0000021C2FE5E7A0>
+    └ <class 'BAC0.scripts.Base.Base'>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\scripts\Base.py", line 143, in __init__
+    raise InitializationError(
+          └ <class 'BAC0.core.io.IOExceptions.InitializationError'>
+
+BAC0.core.io.IOExceptions.InitializationError: IP Address provided (10.168.253.150) invalid. Check if another software is using port 47808 on this network interface. If so, you can define multiple IP per interface. Or specify another IP using BAC0.lite(ip='IP/mask')
+2022-07-29 at 13:11:26 | DEBUG | READY create bacnet-client
+2022-07-29 at 13:11:26 | ERROR | FAIL READ ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127']/24 analogValue 1667 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x000001FA55093E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x000001FA67D2B1C0>
+    └ <__main__.GTW object at 0x000001FA67C0D180>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x000001FA67C0D180>
+    │                   │    │      └ <function BACnetClient.reading at 0x000001FA67BF83A0>
+    │                   │    └ <BACnet.BACnetClient object at 0x000001FA67C6A290>
+    │                   └ <__main__.GTW object at 0x000001FA67C0D180>
+    └ <__main__.GTW object at 0x000001FA67C0D180>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x000001FA678C1EA0>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056975
+    │    │    └ <BACnet.BACnetClient object at 0x000001FA67C6A290>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x000001FA67C6A290>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x000001FA678C2050>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056975
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:14:50 | DEBUG | READY create bacnet-client
+2022-07-29 at 13:14:50 | ERROR | FAIL READ ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127']/24 analogValue 1667 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x000001BB07FB3E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x000001BB1AC5F130>
+    └ <__main__.GTW object at 0x000001BB08953DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x000001BB08953DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x000001BB1AB28310>
+    │                   │    └ <BACnet.BACnetClient object at 0x000001BB1AB9A9E0>
+    │                   └ <__main__.GTW object at 0x000001BB08953DC0>
+    └ <__main__.GTW object at 0x000001BB08953DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x000001BB1A7F1E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3057076
+    │    │    └ <BACnet.BACnetClient object at 0x000001BB1AB9A9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x000001BB1AB9A9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x000001BB1A7F1FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3057076
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:17:08 | DEBUG | READY create bacnet-client
+2022-07-29 at 13:17:08 | ERROR | FAIL READ ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127']/24 analogValue 1667 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x00000182A72F3E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000182B9F8B130>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000182A7C83DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000182B9E58310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │                   └ <__main__.GTW object at 0x00000182A7C83DC0>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000182B9B21E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+    │    │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000182B9B21FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:17:08 | ERROR | FAIL READ ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127']/24 analogValue 1668 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x00000182A72F3E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000182B9F8B130>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000182A7C83DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000182B9E58310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │                   └ <__main__.GTW object at 0x00000182A7C83DC0>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000182B9B21E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+    │    │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000182B9B21FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:17:08 | ERROR | FAIL READ ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127']/24 analogValue 1669 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x00000182A72F3E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000182B9F8B130>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000182A7C83DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000182B9E58310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │                   └ <__main__.GTW object at 0x00000182A7C83DC0>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000182B9B21E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+    │    │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000182B9B21FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:17:08 | ERROR | FAIL READ ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127']/24 analogInput 104 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x00000182A72F3E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000182B9F8B130>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000182A7C83DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000182B9E58310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │                   └ <__main__.GTW object at 0x00000182A7C83DC0>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000182B9B21E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+    │    │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000182B9B21FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:17:08 | ERROR | FAIL READ ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127']/24 binaryInput 1021 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x00000182A72F3E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000182B9F8B130>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000182A7C83DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000182B9E58310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │                   └ <__main__.GTW object at 0x00000182A7C83DC0>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000182B9B21E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+    │    │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000182B9B21FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:17:08 | ERROR | FAIL READ ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127']/24 binaryInput 1022 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x00000182A72F3E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000182B9F8B130>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000182A7C83DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000182B9E58310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │                   └ <__main__.GTW object at 0x00000182A7C83DC0>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000182B9B21E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+    │    │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000182B9B21FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:17:08 | ERROR | FAIL READ ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127']/24 binaryInput 1023 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x00000182A72F3E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000182B9F8B130>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000182A7C83DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000182B9E58310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │                   └ <__main__.GTW object at 0x00000182A7C83DC0>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000182B9B21E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+    │    │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000182B9B21FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:17:08 | ERROR | FAIL READ ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127']/24 binaryInput 1024 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x00000182A72F3E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000182B9F8B130>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000182A7C83DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000182B9E58310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │                   └ <__main__.GTW object at 0x00000182A7C83DC0>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000182B9B21E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+    │    │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000182B9B21FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:17:08 | ERROR | FAIL READ ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127']/24 binaryInput 1025 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x00000182A72F3E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000182B9F8B130>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000182A7C83DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000182B9E58310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │                   └ <__main__.GTW object at 0x00000182A7C83DC0>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000182B9B21E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+    │    │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000182B9B21FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:17:08 | ERROR | FAIL READ ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127']/24 binaryInput 1026 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x00000182A72F3E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000182B9F8B130>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000182A7C83DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000182B9E58310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │                   └ <__main__.GTW object at 0x00000182A7C83DC0>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000182B9B21E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+    │    │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000182B9B21FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:17:08 | ERROR | FAIL READ ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127']/24 binaryOutput 201 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x00000182A72F3E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000182B9F8B130>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000182A7C83DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000182B9E58310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │                   └ <__main__.GTW object at 0x00000182A7C83DC0>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000182B9B21E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+    │    │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000182B9B21FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:17:08 | ERROR | FAIL READ ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127']/24 binaryOutput 202 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x00000182A72F3E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000182B9F8B130>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000182A7C83DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000182B9E58310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │                   └ <__main__.GTW object at 0x00000182A7C83DC0>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000182B9B21E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+    │    │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000182B9B21FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:17:08 | ERROR | FAIL READ ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127']/24 analogValue 1403 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x00000182A72F3E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000182B9F8B130>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000182A7C83DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000182B9E58310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │                   └ <__main__.GTW object at 0x00000182A7C83DC0>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000182B9B21E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+    │    │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000182B9B21FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:17:08 | ERROR | FAIL READ ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127']/24 analogValue 1404 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x00000182A72F3E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000182B9F8B130>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000182A7C83DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000182B9E58310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │                   └ <__main__.GTW object at 0x00000182A7C83DC0>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000182B9B21E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+    │    │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000182B9B21FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:17:08 | ERROR | FAIL READ ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127']/24 analogValue 1405 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x00000182A72F3E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000182B9F8B130>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000182A7C83DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000182B9E58310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │                   └ <__main__.GTW object at 0x00000182A7C83DC0>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000182B9B21E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+    │    │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000182B9B21FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:17:08 | ERROR | FAIL READ ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127']/24 binaryValue 2871 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x00000182A72F3E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000182B9F8B130>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000182A7C83DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000182B9E58310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │                   └ <__main__.GTW object at 0x00000182A7C83DC0>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000182B9B21E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+    │    │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000182B9B21FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:17:08 | ERROR | FAIL READ ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127']/24 binaryValue 2872 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x00000182A72F3E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000182B9F8B130>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000182A7C83DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000182B9E58310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │                   └ <__main__.GTW object at 0x00000182A7C83DC0>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000182B9B21E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+    │    │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000182B9B21FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:17:08 | ERROR | FAIL READ ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127']/24 binaryValue 2873 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x00000182A72F3E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000182B9F8B130>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000182A7C83DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000182B9E58310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │                   └ <__main__.GTW object at 0x00000182A7C83DC0>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000182B9B21E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+    │    │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000182B9B21FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:17:08 | ERROR | FAIL READ ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127']/24 binaryValue 2874 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x00000182A72F3E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000182B9F8B130>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000182A7C83DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000182B9E58310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │                   └ <__main__.GTW object at 0x00000182A7C83DC0>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000182B9B21E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+    │    │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000182B9B21FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:17:08 | ERROR | FAIL READ ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127']/24 binaryValue 2875 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x00000182A72F3E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000182B9F8B130>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000182A7C83DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000182B9E58310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │                   └ <__main__.GTW object at 0x00000182A7C83DC0>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000182B9B21E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+    │    │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000182B9B21FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:17:08 | ERROR | FAIL READ ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127']/24 binaryValue 2876 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x00000182A72F3E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000182B9F8B130>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000182A7C83DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000182B9E58310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │                   └ <__main__.GTW object at 0x00000182A7C83DC0>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000182B9B21E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+    │    │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000182B9B21FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:17:08 | ERROR | FAIL READ ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127']/24 binaryInput 1054 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x00000182A72F3E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000182B9F8B130>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000182A7C83DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000182B9E58310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │                   └ <__main__.GTW object at 0x00000182A7C83DC0>
+    └ <__main__.GTW object at 0x00000182A7C83DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000182B9B21E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+    │    │    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000182B9ECA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000182B9B21FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056207
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:20 | DEBUG | READY create bacnet-client
+2022-07-29 at 13:18:20 | ERROR | FAIL READ 10.168.253.127/24 analogValue 1667 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x000001A361423E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x000001A373C8B130>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x000001A3619E3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x000001A373B50310>
+    │                   │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │                   └ <__main__.GTW object at 0x000001A3619E3DC0>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x000001A373821E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+    │    │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x000001A373821FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:20 | ERROR | FAIL READ 10.168.253.127/24 analogValue 1668 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x000001A361423E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x000001A373C8B130>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x000001A3619E3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x000001A373B50310>
+    │                   │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │                   └ <__main__.GTW object at 0x000001A3619E3DC0>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x000001A373821E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+    │    │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x000001A373821FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:20 | ERROR | FAIL READ 10.168.253.127/24 analogValue 1669 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x000001A361423E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x000001A373C8B130>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x000001A3619E3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x000001A373B50310>
+    │                   │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │                   └ <__main__.GTW object at 0x000001A3619E3DC0>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x000001A373821E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+    │    │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x000001A373821FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:20 | ERROR | FAIL READ 10.168.253.127/24 analogInput 104 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x000001A361423E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x000001A373C8B130>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x000001A3619E3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x000001A373B50310>
+    │                   │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │                   └ <__main__.GTW object at 0x000001A3619E3DC0>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x000001A373821E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+    │    │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x000001A373821FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:20 | ERROR | FAIL READ 10.168.253.127/24 binaryInput 1021 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x000001A361423E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x000001A373C8B130>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x000001A3619E3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x000001A373B50310>
+    │                   │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │                   └ <__main__.GTW object at 0x000001A3619E3DC0>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x000001A373821E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+    │    │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x000001A373821FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:20 | ERROR | FAIL READ 10.168.253.127/24 binaryInput 1022 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x000001A361423E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x000001A373C8B130>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x000001A3619E3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x000001A373B50310>
+    │                   │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │                   └ <__main__.GTW object at 0x000001A3619E3DC0>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x000001A373821E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+    │    │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x000001A373821FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:20 | ERROR | FAIL READ 10.168.253.127/24 binaryInput 1023 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x000001A361423E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x000001A373C8B130>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x000001A3619E3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x000001A373B50310>
+    │                   │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │                   └ <__main__.GTW object at 0x000001A3619E3DC0>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x000001A373821E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+    │    │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x000001A373821FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:20 | ERROR | FAIL READ 10.168.253.127/24 binaryInput 1024 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x000001A361423E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x000001A373C8B130>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x000001A3619E3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x000001A373B50310>
+    │                   │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │                   └ <__main__.GTW object at 0x000001A3619E3DC0>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x000001A373821E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+    │    │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x000001A373821FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:20 | ERROR | FAIL READ 10.168.253.127/24 binaryInput 1025 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x000001A361423E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x000001A373C8B130>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x000001A3619E3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x000001A373B50310>
+    │                   │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │                   └ <__main__.GTW object at 0x000001A3619E3DC0>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x000001A373821E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+    │    │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x000001A373821FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:20 | ERROR | FAIL READ 10.168.253.127/24 binaryInput 1026 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x000001A361423E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x000001A373C8B130>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x000001A3619E3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x000001A373B50310>
+    │                   │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │                   └ <__main__.GTW object at 0x000001A3619E3DC0>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x000001A373821E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+    │    │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x000001A373821FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:20 | ERROR | FAIL READ 10.168.253.127/24 binaryOutput 201 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x000001A361423E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x000001A373C8B130>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x000001A3619E3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x000001A373B50310>
+    │                   │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │                   └ <__main__.GTW object at 0x000001A3619E3DC0>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x000001A373821E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+    │    │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x000001A373821FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:20 | ERROR | FAIL READ 10.168.253.127/24 binaryOutput 202 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x000001A361423E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x000001A373C8B130>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x000001A3619E3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x000001A373B50310>
+    │                   │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │                   └ <__main__.GTW object at 0x000001A3619E3DC0>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x000001A373821E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+    │    │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x000001A373821FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:20 | ERROR | FAIL READ 10.168.253.127/24 analogValue 1403 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x000001A361423E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x000001A373C8B130>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x000001A3619E3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x000001A373B50310>
+    │                   │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │                   └ <__main__.GTW object at 0x000001A3619E3DC0>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x000001A373821E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+    │    │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x000001A373821FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:20 | ERROR | FAIL READ 10.168.253.127/24 analogValue 1404 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x000001A361423E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x000001A373C8B130>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x000001A3619E3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x000001A373B50310>
+    │                   │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │                   └ <__main__.GTW object at 0x000001A3619E3DC0>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x000001A373821E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+    │    │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x000001A373821FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:20 | ERROR | FAIL READ 10.168.253.127/24 analogValue 1405 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x000001A361423E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x000001A373C8B130>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x000001A3619E3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x000001A373B50310>
+    │                   │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │                   └ <__main__.GTW object at 0x000001A3619E3DC0>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x000001A373821E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+    │    │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x000001A373821FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:20 | ERROR | FAIL READ 10.168.253.127/24 binaryValue 2871 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x000001A361423E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x000001A373C8B130>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x000001A3619E3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x000001A373B50310>
+    │                   │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │                   └ <__main__.GTW object at 0x000001A3619E3DC0>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x000001A373821E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+    │    │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x000001A373821FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:20 | ERROR | FAIL READ 10.168.253.127/24 binaryValue 2872 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x000001A361423E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x000001A373C8B130>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x000001A3619E3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x000001A373B50310>
+    │                   │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │                   └ <__main__.GTW object at 0x000001A3619E3DC0>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x000001A373821E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+    │    │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x000001A373821FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:20 | ERROR | FAIL READ 10.168.253.127/24 binaryValue 2873 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x000001A361423E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x000001A373C8B130>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x000001A3619E3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x000001A373B50310>
+    │                   │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │                   └ <__main__.GTW object at 0x000001A3619E3DC0>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x000001A373821E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+    │    │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x000001A373821FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:20 | ERROR | FAIL READ 10.168.253.127/24 binaryValue 2874 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x000001A361423E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x000001A373C8B130>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x000001A3619E3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x000001A373B50310>
+    │                   │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │                   └ <__main__.GTW object at 0x000001A3619E3DC0>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x000001A373821E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+    │    │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x000001A373821FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:20 | ERROR | FAIL READ 10.168.253.127/24 binaryValue 2875 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x000001A361423E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x000001A373C8B130>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x000001A3619E3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x000001A373B50310>
+    │                   │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │                   └ <__main__.GTW object at 0x000001A3619E3DC0>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x000001A373821E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+    │    │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x000001A373821FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:20 | ERROR | FAIL READ 10.168.253.127/24 binaryValue 2876 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x000001A361423E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x000001A373C8B130>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x000001A3619E3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x000001A373B50310>
+    │                   │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │                   └ <__main__.GTW object at 0x000001A3619E3DC0>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x000001A373821E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+    │    │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x000001A373821FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:20 | ERROR | FAIL READ 10.168.253.127/24 binaryInput 1054 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x000001A361423E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x000001A373C8B130>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x000001A3619E3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x000001A373B50310>
+    │                   │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │                   └ <__main__.GTW object at 0x000001A3619E3DC0>
+    └ <__main__.GTW object at 0x000001A3619E3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x000001A373821E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+    │    │    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x000001A373BCA9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x000001A373821FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056619
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:59 | DEBUG | READY create bacnet-client
+2022-07-29 at 13:18:59 | ERROR | FAIL READ 10.168.253.127 analogValue 1667 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x0000019397853E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000193AA4FB130>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000193981B3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000193AA3C0310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │                   └ <__main__.GTW object at 0x00000193981B3DC0>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000193AA091E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+    │    │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000193AA091FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:59 | ERROR | FAIL READ 10.168.253.127 analogValue 1668 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x0000019397853E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000193AA4FB130>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000193981B3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000193AA3C0310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │                   └ <__main__.GTW object at 0x00000193981B3DC0>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000193AA091E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+    │    │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000193AA091FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:59 | ERROR | FAIL READ 10.168.253.127 analogValue 1669 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x0000019397853E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000193AA4FB130>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000193981B3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000193AA3C0310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │                   └ <__main__.GTW object at 0x00000193981B3DC0>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000193AA091E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+    │    │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000193AA091FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:59 | ERROR | FAIL READ 10.168.253.127 analogInput 104 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x0000019397853E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000193AA4FB130>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000193981B3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000193AA3C0310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │                   └ <__main__.GTW object at 0x00000193981B3DC0>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000193AA091E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+    │    │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000193AA091FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:59 | ERROR | FAIL READ 10.168.253.127 binaryInput 1021 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x0000019397853E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000193AA4FB130>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000193981B3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000193AA3C0310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │                   └ <__main__.GTW object at 0x00000193981B3DC0>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000193AA091E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+    │    │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000193AA091FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:59 | ERROR | FAIL READ 10.168.253.127 binaryInput 1022 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x0000019397853E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000193AA4FB130>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000193981B3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000193AA3C0310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │                   └ <__main__.GTW object at 0x00000193981B3DC0>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000193AA091E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+    │    │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000193AA091FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:59 | ERROR | FAIL READ 10.168.253.127 binaryInput 1023 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x0000019397853E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000193AA4FB130>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000193981B3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000193AA3C0310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │                   └ <__main__.GTW object at 0x00000193981B3DC0>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000193AA091E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+    │    │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000193AA091FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:59 | ERROR | FAIL READ 10.168.253.127 binaryInput 1024 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x0000019397853E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000193AA4FB130>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000193981B3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000193AA3C0310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │                   └ <__main__.GTW object at 0x00000193981B3DC0>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000193AA091E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+    │    │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000193AA091FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:59 | ERROR | FAIL READ 10.168.253.127 binaryInput 1025 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x0000019397853E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000193AA4FB130>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000193981B3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000193AA3C0310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │                   └ <__main__.GTW object at 0x00000193981B3DC0>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000193AA091E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+    │    │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000193AA091FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:59 | ERROR | FAIL READ 10.168.253.127 binaryInput 1026 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x0000019397853E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000193AA4FB130>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000193981B3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000193AA3C0310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │                   └ <__main__.GTW object at 0x00000193981B3DC0>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000193AA091E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+    │    │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000193AA091FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:59 | ERROR | FAIL READ 10.168.253.127 binaryOutput 201 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x0000019397853E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000193AA4FB130>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000193981B3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000193AA3C0310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │                   └ <__main__.GTW object at 0x00000193981B3DC0>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000193AA091E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+    │    │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000193AA091FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:59 | ERROR | FAIL READ 10.168.253.127 binaryOutput 202 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x0000019397853E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000193AA4FB130>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000193981B3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000193AA3C0310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │                   └ <__main__.GTW object at 0x00000193981B3DC0>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000193AA091E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+    │    │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000193AA091FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:59 | ERROR | FAIL READ 10.168.253.127 analogValue 1403 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x0000019397853E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000193AA4FB130>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000193981B3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000193AA3C0310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │                   └ <__main__.GTW object at 0x00000193981B3DC0>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000193AA091E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+    │    │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000193AA091FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:59 | ERROR | FAIL READ 10.168.253.127 analogValue 1404 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x0000019397853E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000193AA4FB130>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000193981B3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000193AA3C0310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │                   └ <__main__.GTW object at 0x00000193981B3DC0>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000193AA091E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+    │    │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000193AA091FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:59 | ERROR | FAIL READ 10.168.253.127 analogValue 1405 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x0000019397853E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000193AA4FB130>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000193981B3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000193AA3C0310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │                   └ <__main__.GTW object at 0x00000193981B3DC0>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000193AA091E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+    │    │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000193AA091FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:59 | ERROR | FAIL READ 10.168.253.127 binaryValue 2871 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x0000019397853E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000193AA4FB130>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000193981B3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000193AA3C0310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │                   └ <__main__.GTW object at 0x00000193981B3DC0>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000193AA091E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+    │    │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000193AA091FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:59 | ERROR | FAIL READ 10.168.253.127 binaryValue 2872 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x0000019397853E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000193AA4FB130>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000193981B3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000193AA3C0310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │                   └ <__main__.GTW object at 0x00000193981B3DC0>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000193AA091E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+    │    │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000193AA091FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:59 | ERROR | FAIL READ 10.168.253.127 binaryValue 2873 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x0000019397853E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000193AA4FB130>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000193981B3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000193AA3C0310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │                   └ <__main__.GTW object at 0x00000193981B3DC0>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000193AA091E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+    │    │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000193AA091FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:59 | ERROR | FAIL READ 10.168.253.127 binaryValue 2874 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x0000019397853E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000193AA4FB130>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000193981B3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000193AA3C0310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │                   └ <__main__.GTW object at 0x00000193981B3DC0>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000193AA091E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+    │    │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000193AA091FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:59 | ERROR | FAIL READ 10.168.253.127 binaryValue 2875 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x0000019397853E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000193AA4FB130>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000193981B3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000193AA3C0310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │                   └ <__main__.GTW object at 0x00000193981B3DC0>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000193AA091E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+    │    │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000193AA091FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:59 | ERROR | FAIL READ 10.168.253.127 binaryValue 2876 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x0000019397853E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000193AA4FB130>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000193981B3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000193AA3C0310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │                   └ <__main__.GTW object at 0x00000193981B3DC0>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000193AA091E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+    │    │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000193AA091FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
+2022-07-29 at 13:18:59 | ERROR | FAIL READ 10.168.253.127 binaryInput 1054 presentValue
+Traceback (most recent call last):
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 38, in <module>
+    run()
+    └ <function run at 0x0000019397853E20>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 32, in run
+    gtw.run_bacnet()
+    │   └ <function GTW.run_bacnet at 0x00000193AA4FB130>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\main.py", line 20, in run_bacnet
+    self.reading_data = self.bacnet.reading(self.device)
+    │                   │    │      │       │    └ {'DEVICE_IP': ['10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '10.168.253.127', '1...
+    │                   │    │      │       └ <__main__.GTW object at 0x00000193981B3DC0>
+    │                   │    │      └ <function BACnetClient.reading at 0x00000193AA3C0310>
+    │                   │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │                   └ <__main__.GTW object at 0x00000193981B3DC0>
+    └ <__main__.GTW object at 0x00000193981B3DC0>
+
+> File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\BACnet.py", line 29, in reading
+    self.pv = self.client.read(f'{device_dict["DEVICE_IP"]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+    │    │    │    │      └ <function ReadProperty.read at 0x00000193AA091E10>
+    │    │    │    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+    │    │    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+    │    └ None
+    └ <BACnet.BACnetClient object at 0x00000193AA43A9E0>
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 123, in read
+    self.build_rp_request(
+    │    └ <function ReadProperty.build_rp_request at 0x00000193AA091FC0>
+    └ Bacnet Network using ip 192.168.1.67 with device id 3056588
+
+  File "C:\Users\lutyisan\PycharmProjects\BACnetMQTT\venv\lib\site-packages\BAC0\core\io\Read.py", line 435, in build_rp_request
+    raise ValueError("Unknown object type : {}".format(obj_type))
+                                                       └ "'10.168.253.127',"
+
+ValueError: Unknown object type : '10.168.253.127',
