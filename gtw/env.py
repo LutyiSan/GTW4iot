@@ -17,4 +17,4 @@ TOPIC = "zavidovo"
 
 # Параметры базы данных
 DB_ENABLE = False
-DB_NAME = "devices.db"
+DB_NAME = "database/devices.db"
