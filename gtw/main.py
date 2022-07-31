@@ -23,17 +23,17 @@ class GTW:
             if state:
                 #  Получаем словарь из csv девайса
                 self.device = get_device_dict(i)
-
-                #  Создаем таблицу девайса в БД
-                self.crate_table(f'{self.device["TOPIC"][1]}')
+                if DB_ENABLE:
+                    #  Создаем таблицу девайса в БД
+                    self.crate_table(f'{self.device["TOPIC"][1]}')
 
                 # Опрашиваем девайс
                 self.reading_data = self.bacnet.read_load(self.device)
                 self.bacnet.disconnect()
+                if DB_ENABLE:
+                    # Сохраняем полученые данные в БД
 
-                # Сохраняем полученые данные в БД
-
-                self.sql.put_data(f'{self.device["TOPIC"][1]}', self.reading_data)
+                    self.sql.put_data(f'{self.device["TOPIC"][1]}', self.reading_data)
 
                 # Отправляем полученые данные в MQTT
                 self.sent_data()
@@ -50,7 +50,7 @@ class GTW:
             self.mqttclient.send(f'{TOPIC}/{self.device["TOPIC"][1]}', sent_data)
 
     def crate_table(self, table):
-        self.sql.connect("devices.db")
+        self.sql.connect(DB_NAME)
         self.sql.create_table(table)
 
     def insert_data_to_table(self, table, input_data):

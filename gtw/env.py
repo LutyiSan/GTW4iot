@@ -14,3 +14,7 @@ USE_PASSWD = 'admin'
 BROKER = "46.8.210.67"
 BROKER_PORT = 15675
 TOPIC = "zavidovo"
+
+# Параметры базы данных
+DB_ENABLE = False
+DB_NAME = "devices.db"
