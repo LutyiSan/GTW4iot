@@ -44,17 +44,7 @@ class BACnetClient:
         return device_dict
 
     def read_multiple(self, device_dict):
-        self.read_dict = device_dict
-        read_objects = dict()
-        _rpm = {'address': self.read_dict['DEVICE_IP'][0]}
-        idx = -1
-        while idx < (len(self.read_dict["OBJECT_ID"]) - 1):
-            idx += 1
-            key_0 = self.read_dict['OBJECT_TYPE'][idx]
-            key_1 = self.read_dict['OBJECT_ID'][idx]
-            properties = ['presentValue', 'objectName']
-            read_objects.update({f"{key_0}:{key_1}": properties})
-        _rpm['objects'] = read_objects
+        _rpm = self.rpm_maker(device_dict)
         try:
             self.read_result = self.client.readMultiple(f'{self.read_dict["DEVICE_IP"][1]}/24', request_dict=_rpm)
             if len(self.read_result) >1:
@@ -79,6 +69,9 @@ class BACnetClient:
         start = time.time()
         self.len_request = MILTIREAD_LENGTH
         self.pack_dict = {"DEVICE_IP": [], "DEVICE_ID": [], "OBJECT_TYPE": [], "OBJECT_ID": [], "OBJECT_NAME": [], "PRESENT_VALUE": [], "TOPIC": []}
+        if MILTIREAD_LENGTH > len(device_dict['OBJECT_ID']):
+            self.len_request = len(device_dict['OBJECT_ID'])
+
         if len(device_dict['OBJECT_ID']) > self.len_request:
             self.len_signals = len(device_dict['OBJECT_ID'])
             self.load_data = dict()
@@ -92,7 +85,7 @@ class BACnetClient:
             segments = self.len_signals // self.len_request
             self.last_segment = self.len_signals % self.len_request
             s = 0
-            while s < (segments):
+            while s < segments:
                 s += 1
                 if s == 1:
                     self.slicer(s)
@@ -112,7 +105,7 @@ class BACnetClient:
             cicle = (time.time() - start)
             print (f'Cicle time {cicle} sec')
             return self.pack_dict
-        else:
+        elif len(device_dict['OBJECT_ID']) == self.len_request:
             return device_dict
 
     def insert_pv(self, read_result):
@@ -150,6 +143,22 @@ class BACnetClient:
             self.load_data["OBJECT_NAME"] = self.name[self.len_request * (s - 1):self.len_request * s]
             self.load_data["PRESENT_VALUE"] = self.pv[self.len_request * (s - 1):self.len_request * s]
             self.load_data["TOPIC"] = self.topic[self.len_request * (s - 1):self.len_request * s]
+
+    def rpm_maker(self, device_dict):
+        self.read_dict = device_dict
+        read_objects = dict()
+        _rpm = {'address': self.read_dict['DEVICE_IP'][0]}
+        idx = -1
+        while idx < (len(self.read_dict["OBJECT_ID"]) - 1):
+            idx += 1
+            key_0 = self.read_dict['OBJECT_TYPE'][idx]
+            key_1 = self.read_dict['OBJECT_ID'][idx]
+            properties = ['presentValue', 'objectName']
+            read_objects.update({f"{key_0}:{key_1}": properties})
+        _rpm['objects'] = read_objects
+        return _rpm
+
+
 
     def disconnect(self):
         self.client.disconnect()

@@ -23,20 +23,20 @@ class GTW:
             if state:
                 #  Получаем словарь из csv девайса
                 self.device = get_device_dict(i)
-                if DB_ENABLE:
-                    #  Создаем таблицу девайса в БД
-                    self.crate_table(f'{self.device["TOPIC"][1]}')
-
-                # Опрашиваем девайс
-                self.reading_data = self.bacnet.read_load(self.device)
-                self.bacnet.disconnect()
-                if DB_ENABLE:
-                    # Сохраняем полученые данные в БД
-
-                    self.sql.put_data(f'{self.device["TOPIC"][1]}', self.reading_data)
-
-                # Отправляем полученые данные в MQTT
-                self.sent_data()
+                if self.device:
+                    if DB_ENABLE:
+                        #  Создаем таблицу девайса в БД
+                        self.crate_table(f'{self.device["TOPIC"][1]}')
+                        # Опрашиваем девайс
+                    self.reading_data = self.bacnet.read_load(self.device)
+                    self.bacnet.disconnect()
+                    if DB_ENABLE:
+                        # Сохраняем полученые данные в БД
+                        self.sql.put_data(f'{self.device["TOPIC"][1]}', self.reading_data)
+                    # Отправляем полученые данные в MQTT
+                    self.sent_data()
+                else:
+                    logger.info(f"FAIL read csv {i}")
             else:
                 logger.info("Please inspect parameters in env.py")
 
@@ -46,8 +46,8 @@ class GTW:
         for i in sent_data:
             idx += 1
             sent_data[i] = self.reading_data['PRESENT_VALUE'][idx]
-            self.mqttclient.connect(BROKER, BROKER_PORT)
-            self.mqttclient.send(f'{TOPIC}/{self.device["TOPIC"][1]}', sent_data)
+            if self.mqttclient.connect(BROKER, BROKER_PORT):
+                self.mqttclient.send(f'{TOPIC}/{self.device["TOPIC"][1]}', sent_data)
 
     def crate_table(self, table):
         self.sql.connect(DB_NAME)

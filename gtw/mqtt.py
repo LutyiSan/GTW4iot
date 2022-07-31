@@ -21,8 +21,10 @@ class MyMQTT:
         try:
             self.client.connect(broker, port=port, keepalive=60, bind_address="")
             logger.debug("READY connect mqtt-client to broker")
+            return True
         except Exception as e:
             logger.exception("FAIL connect mqtt-client to broker", e)
+            return False
 
     def send(self, topic, send_data):
         try:

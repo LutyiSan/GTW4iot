@@ -1,14 +1,6 @@
 import sqlite3 as sql
 from datetime import datetime
 
-input = {"DEVICE_IP": ["10.10.10.10", "10.10.10.10", "10.10.10.10"],
-         "DEVICE_ID": [10, 10, 10],
-         "OBJECT_TYPE": ["analogValue", "binaryValue", "binaryOutput"],
-         "OBJECT_ID": [1, 2, 3],
-         "OBJECT_NAME": ["TE-1", "START:", "ALARM"],
-         "PRESENT_VALUE": ["22.5", "inactive", "active"],
-         "TOPIC": ["sch_1", "sch_1", "sch_1"]}
-
 
 class MySQL:
     def __init__(self):
@@ -26,7 +18,6 @@ class MySQL:
         self.conn.commit()
 
     def put_data(self, table, input_data):
-
         count = len(input_data['OBJECT_ID'])
         idx = -1
         while idx < (count - 1):
