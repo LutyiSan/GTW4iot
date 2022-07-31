@@ -3,8 +3,7 @@ HOST_IP = "10.168.253.150"
 HOST_PORT = 47808
 
 # Список csv-файлов с конфигурациями объектов девасов, вписаные девайсы будут опрашиваться
-DEVICE_CSV = ['device_101.csv','device_102.csv','device_103.csv','device_104.csv','device_105.csv','device_106.csv','device_107.csv','device_108.csv','device_109.csv','device_110.csv','device_111.csv','device_112.csv','device_113.csv']
-#DEVICE_CSV = ["device_113.csv"]
+DEVICE_CSV = ['gtw/devices/device_101.csv','gtw/devices/device_102.csv','gtw/devices/device_103.csv','gtw/devices/device_104.csv','gtw/devices/device_105.csv','gtw/devices/device_106.csv','gtw/devices/device_107.csv','gtw/devices/device_108.csv','gtw/devices/device_109.csv','gtw/devices/device_110.csv','gtw/devices/device_111.csv','gtw/devices/device_112.csv','gtw/devices/device_113.csv']
 
 # Максимальное Количество точек для мультичтения
 MILTIREAD_LENGTH = 50
