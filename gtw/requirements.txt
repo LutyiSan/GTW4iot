@@ -1,0 +1,5 @@
+loguru~=0.6.0
+paho-mqtt~=1.6.1
+psycopg2~=2.9.3
+BAC0~=21.12.3
+pandas~=1.4.0
