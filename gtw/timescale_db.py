@@ -51,3 +51,4 @@ class TSDB:
             logger.exception(f"FAIL insert data to {table} in Timescale DB\n", e)
 
 
+
