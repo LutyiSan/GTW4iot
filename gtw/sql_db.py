@@ -1,13 +1,12 @@
 import sqlite3 as sql
 from loguru import logger
 from datetime import datetime
-
+from env import *
 
 class MySQL:
     def __init__(self):
         self.sql = sql
-        self.cursor = None
-        self.conn = None
+
 
     def connect(self, db):
         try:
