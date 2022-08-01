@@ -43,3 +43,4 @@ class MySQL:
         for i in result:
             print(i)
         return result
+t

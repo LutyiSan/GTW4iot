@@ -27,12 +27,11 @@ class MyMQTT:
             return False
 
     def send(self, topic, send_data):
-        try:
-            send_json = json.dumps(send_data)
-            self.client.publish(topic, payload=send_json, qos=1, retain=True)
-            logger.debug(f"SUCCESSFUL sent data {topic}")
+       # try:
+       send_json = json.dumps(send_data)
+       self.client.publish(topic, payload=send_json, qos=0, retain=False)
+       logger.debug(f"SUCCESSFUL sent data {topic}")
             #logger.info(send_json)
-        except Exception as e:
-            logger.exception("FAIL sent data", e)
-
+        #except Exception as e:
+            #logger.exception("FAIL sent data", e)
 

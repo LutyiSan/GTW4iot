@@ -16,7 +16,7 @@ class BACnetClient:
         self.ip_address = None
         logger.add('logs/bacnet.log', format="{time:YYYY-MM-DD at HH:mm:ss} | {level} | {message}", rotation='10 MB')
 
-    def create(self, ip_address="127.0.0.1", port=47808):
+    def create(self, ip_address, port):
         try:
             self.client = BAC0.lite(ip=ip_address, port=port)
             logger.debug("READY create bacnet-client")
