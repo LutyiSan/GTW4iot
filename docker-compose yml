@@ -1,0 +1,8 @@
+version: '3.7'
+
+services:
+  gtw4iot:
+    build: .
+    volumes:
+      - ./gtw:/gtw
+    network_mode: host

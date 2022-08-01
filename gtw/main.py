@@ -33,9 +33,9 @@ class GTW:
                     if GTW_MODE == "bacnet-mqtt-timescaledb":
                         #  Создаем таблицу девайса в Timescale DB
                         self.ts.create_table(f'{self.device["TOPIC"][1]}')
-                    elif GTW_MODE == "bacnet-mqtt-timescaledb":
+                    elif GTW_MODE == "bacnet-mqtt-sqlite3":
                         #  Создаем таблицу девайса в SQLITE3
-                        self.sql.connect()
+                        self.sql.connect(DB_NAME)
                         self.sql.create_table(f'{self.device["TOPIC"][1]}')
 
                     # Опрашиваем девайс

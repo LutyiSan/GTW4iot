@@ -1,13 +1,12 @@
 import sqlite3 as sql
 from loguru import logger
 from datetime import datetime
-
+from env import *
 
 class MySQL:
     def __init__(self):
         self.sql = sql
-        self.cursor = None
-        self.conn = None
+
 
     def connect(self, db):
         try:
@@ -39,3 +38,8 @@ class MySQL:
             logger.debug(f"READY insert data to {table} in sqlite3")
         except Exception as e:
             logger.exception(f"FAIL insert data to {table} in sqlite3\n", e)
+
+conn = sql.connect(DB_NAME)
+cur = conn.cursor()
+cur.execute("SELECT * FROM device_00")
+print(cur.fetchall())
