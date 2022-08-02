@@ -2,7 +2,7 @@ import psycopg2 as ts
 from loguru import logger
 from env import *
 from datetime import datetime
-
+import json
 
 class TSDB:
     def __init__(self):
@@ -17,10 +17,8 @@ class TSDB:
             with ts.connect(self.CONNECTION) as self.conn:
                 self.cursor = self.conn.cursor()
                 self.cursor.execute(f"""CREATE TABLE IF NOT EXISTS {table} (
-                                                   time TIMESTAMPTZ NOT NULL,
-                                                   device_id INTEGER,
-                                                   object_name TEXT,
-                                                   present_value TEXT
+                                                   time TIMESTAMP NOT NULL,
+                                                   device_data JSON
                                                    );""")
                 self.conn.commit()
             logger.debug(f"READY (or ALREADY EXISTS) {table} in Timescale DB")
@@ -29,26 +27,24 @@ class TSDB:
 
     def put_data(self, table, input_data):
         try:
-            data = []
-            lid = len(input_data["OBJECT_NAME"])
-            idx = -1
-            while idx < (lid - 1):
-                idx += 1
-                single_data = []
-                tst = datetime.now()
-                single_data.append(tst)
-                single_data.append(input_data["DEVICE_ID"][idx])
-                single_data.append(input_data["OBJECT_NAME"][idx])
-                single_data.append(input_data["PRESENT_VALUE"][idx])
-                data.append(tuple(single_data))
+            input_data.pop('DEVICE_IP', None)
+            input_data.pop('OBJECT_TYPE', None)
+            input_data.pop('OBJECT_ID', None)
+            input_data.pop('TOPIC', None)
+            qdata = []
+            jdata = json.dumps(input_data)
             with ts.connect(self.CONNECTION) as self.conn:
                 self.cursor = self.conn.cursor()
-                query = f"""INSERT INTO {table}(time, device_id, object_name, present_value) VALUES (%s, %s, %s, %s);"""
-                self.cursor.executemany(query, data)
+                query = f"""INSERT INTO {table}(time, device_data) VALUES (%s, %s);"""
+                timestamp = datetime.now()
+                qdata.append(timestamp)
+                qdata.append(jdata)
+                self.cursor.execute(query, qdata)
                 self.conn.commit()
             logger.debug(f"READY insert data to {table} in Timescale DB")
         except Exception as e:
             logger.exception(f"FAIL insert data to {table} in Timescale DB\n", e)
+
 
 
 
