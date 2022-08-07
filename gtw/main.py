@@ -39,8 +39,12 @@ class GTW:
                         self.sql.create_table(f'{self.device["TOPIC"][1]}')
 
                     # Опрашиваем девайс
-                    self.reading_data = self.bacnet.read_load(self.device)
-                    self.bacnet.disconnect()
+                    if MILTIREAD_LENGTH > 1:
+                        self.reading_data = self.bacnet.read_load(self.device)
+                        self.bacnet.disconnect()
+                    else:
+                        self.reading_data = self.bacnet.read_single(self.device)
+                        self.bacnet.disconnect()
 
                     # Отправляем полученые данные в MQTT
                     self.sent_data()

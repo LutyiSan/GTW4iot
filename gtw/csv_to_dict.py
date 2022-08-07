@@ -9,3 +9,4 @@ def get_device_dict(file):
     except Exception as e:
         logger.exception(f"FAIL read csv{file}", e)
         return False
+

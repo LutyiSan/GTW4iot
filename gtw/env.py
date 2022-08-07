@@ -9,7 +9,7 @@ HOST_PORT = 47808
 DEVICE_CSV = ['gtw/devices/device_105.csv']
 
 # Максимальное Количество точек для мультичтения
-MILTIREAD_LENGTH = 50
+MILTIREAD_LENGTH = 50 #  Минимум 3, Максимум заисит от того сколько может отдать девайс по превысив APDU
 
 # MQTT параметры
 USER_NAME = 'admin'

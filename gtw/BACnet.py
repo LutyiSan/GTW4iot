@@ -153,7 +153,7 @@ class BACnetClient:
             idx += 1
             key_0 = self.read_dict['OBJECT_TYPE'][idx]
             key_1 = self.read_dict['OBJECT_ID'][idx]
-            properties = ['presentValue', 'objectName']
+            properties = ['presentValue']
             read_objects.update({f"{key_0}:{key_1}": properties})
         _rpm['objects'] = read_objects
         return _rpm
