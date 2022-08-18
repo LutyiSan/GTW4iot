@@ -1,1 +1,1 @@
-sudo docker run --rm -it --network host gtwiot
+sudo python3 gtw/main.py

@@ -22,8 +22,10 @@ class TSDB:
                                                    );""")
                 self.conn.commit()
             logger.debug(f"READY (or ALREADY EXISTS) {table} in Timescale DB")
+            return True
         except Exception as e:
             logger.exception(f"FAIL Create table {table} in Timescale DB\n", e)
+            return False
 
     def put_data(self, table, input_data):
         try:

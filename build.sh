@@ -1,1 +1,1 @@
-sudo docker build -t gtwiot .
+sudo pip3 -r install gtw/requirements.txt

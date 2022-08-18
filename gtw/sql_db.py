@@ -1,20 +1,21 @@
 import sqlite3 as sql
 from loguru import logger
 from datetime import datetime
-from env import *
+
 
 class MySQL:
     def __init__(self):
         self.sql = sql
-
 
     def connect(self, db):
         try:
             self.conn = self.sql.connect(db)
             self.cursor = self.conn.cursor()
             logger.debug("READY connect to sqlite3")
+            return True
         except Exception as e:
             logger.exception("FAIL connect to sqlite3\n", e)
+            return False
 
     def create_table(self, table):
         try:
@@ -22,8 +23,10 @@ class MySQL:
                                 OBJECT_ID INT, OBJECT_NAME TEXT, TOPIC TEXT, PRESENT_VALUE TEXT, TIMESTAMP TEXT);""")
             self.conn.commit()
             logger.debug(F"READY (or ALREADY EXISTS) create table {table} in sqlite3")
+            return True
         except Exception as e:
             logger.exception(f"FAIL create table {table} in sqlite3\n", e)
+            return False
 
     def put_data(self, table, input_data):
         try:
