@@ -31,9 +31,10 @@ class GTW:
                     # Опрашиваем девайс
                     if MILTIREAD_LENGTH > 1:
                         self.reading_data = self.bacnet.read_load(self.device)
+                        self.bacnet.disconnect()
                     else:
                         self.reading_data = self.bacnet.read_single(self.device)
-
+                        self.bacnet.disconnect()
                     if self.mqtt_create_state:
                         self.sent_data()
                     else:
@@ -47,13 +48,10 @@ class GTW:
                         self.sql.put_data(f'{self.device["TOPIC"][1]}', self.reading_data)
                 else:
                     logger.info(f"FAIL read csv {i}")
+                    self.bacnet.disconnect()
 
             else:
                 logger.info("Please inspect BACnet parameters in env.py")
-        try:
-            self.bacnet.disconnect()
-        except Exception as e:
-            logger.exception("FAIL disconnect BACnet-Client", e)
 
     def sent_data(self):
         sent_data = dict.fromkeys(self.reading_data['OBJECT_NAME'])

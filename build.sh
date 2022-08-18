@@ -1,1 +1,1 @@
-sudo pip3 -r install gtw/requirements.txt
+sudo pip3 install -r gtw/requirements.txt
