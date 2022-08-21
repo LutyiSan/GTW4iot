@@ -19,10 +19,9 @@ class BACnetClient:
         try:
             self.client = BAC0.lite(ip=ip_address, port=port)
             logger.debug("READY create bacnet-client")
-            return True
+
         except Exception as e:
-            logger.exception("FAIL create bacnet-client", e)
-            return False
+            logger.exception("FAIL create bacnet-client\nInspect parameters in env.py", e)
 
     def read_single(self, device_dict):
         signal = -1
