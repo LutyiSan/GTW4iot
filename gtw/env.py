@@ -10,11 +10,11 @@ DEVICE_CSV = ['gtw/devices/device_109.csv']
 
 # Максимальное Количество точек для мультичтения
 MILTIREAD_LENGTH = 50 #  Минимум 3, Максимум заисит от того сколько может отдать девайс по превысив APDU
-
+                      #  Если 1 то будет происходит чтение сигналов по одному
 # MQTT параметры
-USER_NAME = 'admin'
-USE_PASSWD = 'admin'
-BROKER = "46.8.210.67"
+USER_NAME = 'name'
+USE_PASSWD = 'pass'
+BROKER = "10.10.10.11"
 BROKER_PORT = 15675
 TOPIC = "zavidovo"
 
@@ -24,7 +24,7 @@ DB_NAME = "gtw/database/devices.db"
 # Параметры Timescale DB
 
 TSDB_USER = "postgres"
-TSDB_PASS = "Postgres2!"
-TSDB_HOST = "tsdb.4iot.pro"
+TSDB_PASS = "PostgresPass"
+TSDB_HOST = "10.10.10.10"
 TSDB_PORT = 1532
 TSDB_DB = "postgres"
