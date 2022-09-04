@@ -25,14 +25,17 @@ class BACnetClient:
         # return False
 
     def read_single(self, device_dict):
+        device_dict['STATUS_FLAGS'] = []
         signal = -1
         while signal < (len(device_dict['OBJECT_ID']) - 1):
             signal += 1
             try:
                 self.pv = self.client.read(f'{device_dict["DEVICE_IP"][signal]}/24 {device_dict["OBJECT_TYPE"][signal]}'
                                            f' {device_dict["OBJECT_ID"][signal]} presentValue')
+                self.sf = self.client.read(f'{device_dict["DEVICE_IP"][signal]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+                                           f' {device_dict["OBJECT_ID"][signal]} statusFlags')
                 logger.debug(f'READ OK {device_dict["DEVICE_IP"][signal]} {device_dict["OBJECT_TYPE"][signal]}'
-                             f' {device_dict["OBJECT_ID"][signal]} presentValue: {self.pv}')
+                             f' {device_dict["OBJECT_ID"][signal]} presentValue: {self.pv} statusFlags: {self.sf}')
             except Exception as e:
                 logger.exception(f'FAIL READ {device_dict["DEVICE_IP"][signal]} {device_dict["OBJECT_TYPE"][signal]}'
                                  f' {device_dict["OBJECT_ID"][signal]}', e)
@@ -40,6 +43,10 @@ class BACnetClient:
                 device_dict['PRESENT_VALUE'][signal] = self.pv
             else:
                 device_dict['PRESENT_VALUE'][signal] = "Null"
+            if isinstance(self.sf, list):
+                device_dict['STATUS_FLAGS'].append(self.sf)
+            else:
+                device_dict['STATUS_FLAGS'].append([])
         return device_dict
 
     def read_multiple(self, device_dict):
@@ -103,8 +110,8 @@ class BACnetClient:
                 read_result = self.read_multiple(self.load_data)
                 if isinstance(read_result, dict):
                     self.insert_pv(read_result)
-            cycle = (time.time() - start)
-            print(f'Cycle time {cycle} sec')
+            cicle = (time.time() - start)
+            print(f'Cicle time {cicle} sec')
             return self.pack_dict
         elif len(device_dict['OBJECT_ID']) == self.len_request:
             return device_dict
@@ -163,5 +170,6 @@ class BACnetClient:
 
     def disconnect(self):
         self.client.disconnect()
+
 
 
