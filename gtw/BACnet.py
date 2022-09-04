@@ -19,9 +19,10 @@ class BACnetClient:
         try:
             self.client = BAC0.lite(ip=ip_address, port=port)
             logger.debug("READY create bacnet-client")
-
+            # return True
         except Exception as e:
-            logger.exception("FAIL create bacnet-client\nInspect parameters in env.py", e)
+            logger.exception("FAIL create bacnet-client", e)
+        # return False
 
     def read_single(self, device_dict):
         signal = -1
@@ -49,25 +50,30 @@ class BACnetClient:
                 idx = -1
                 for i in self.read_result:
                     idx += 1
-                    self.read_dict["PRESENT_VALUE"][idx] = self.read_result[i][0][1]
-                    logger.debug(
-                        f"{device_dict['DEVICE_IP'][0]} {i[0]}: {i[1]} {self.read_result[i][0][0]}: {self.read_result[i][0][1]}")
+                    #  print(self.read_result[i][0][1])
+                    self.read_dict["PRESENT_VALUE"].append(self.read_result[i][0][1])
+                    #  print(self.read_result[i][1][1])
+                    self.read_dict["STATUS_FLAGS"].append(self.read_result[i][1][1])
+
+                    logger.debug(f"{device_dict['DEVICE_IP'][0]} {i[0]}: {i[1]} {self.read_result[i][0][0]}:"
+                                 f" pv={self.read_result[i][0][1]} sf={self.read_result[i][1][1]}")
                 return self.read_dict
             else:
                 idx = -1
                 while idx < len(self.read_dict["OBJECT_ID"]) - 1:
                     idx += 1
                     self.read_dict["PRESENT_VALUE"][idx] = "fault"
+                    self.read_dict["STATUS_FLAGS"][idx] = [0,1,0,0]
                 return self.read_dict
         except Exception as e:
             logger.exception("FAIL MULTIPLE-READ", e)
-        return False
+            return False
 
     def read_load(self, device_dict):
         start = time.time()
         self.len_request = MILTIREAD_LENGTH
         self.pack_dict = {"DEVICE_IP": [], "DEVICE_ID": [], "OBJECT_TYPE": [], "OBJECT_ID": [], "OBJECT_NAME": [],
-                          "PRESENT_VALUE": [], "TOPIC": []}
+                          "PRESENT_VALUE": [], 'STATUS_FLAGS': [], "TOPIC": []}
         if MILTIREAD_LENGTH > len(device_dict['OBJECT_ID']):
             self.len_request = len(device_dict['OBJECT_ID'])
 
@@ -113,6 +119,7 @@ class BACnetClient:
         self.pack_dict["OBJECT_TYPE"] += read_result['OBJECT_TYPE']
         self.pack_dict["OBJECT_ID"] += read_result['OBJECT_ID']
         self.pack_dict["PRESENT_VALUE"] += read_result['PRESENT_VALUE']
+        self.pack_dict["STATUS_FLAGS"] += read_result['STATUS_FLAGS']
         self.pack_dict["OBJECT_NAME"] += read_result["OBJECT_NAME"]
         self.pack_dict["TOPIC"] += read_result["TOPIC"]
 
@@ -145,6 +152,7 @@ class BACnetClient:
 
     def rpm_maker(self, device_dict):
         self.read_dict = device_dict
+        self.read_dict['STATUS_FLAGS'] = []
         read_objects = dict()
         _rpm = {'address': self.read_dict['DEVICE_IP'][0]}
         idx = -1
@@ -152,10 +160,11 @@ class BACnetClient:
             idx += 1
             key_0 = self.read_dict['OBJECT_TYPE'][idx]
             key_1 = self.read_dict['OBJECT_ID'][idx]
-            properties = ['presentValue']
+            properties = ['presentValue', 'statusFlags']
             read_objects.update({f"{key_0}:{key_1}": properties})
         _rpm['objects'] = read_objects
         return _rpm
 
     def disconnect(self):
         self.client.disconnect()
+
