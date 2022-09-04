@@ -37,7 +37,7 @@ class BACnetClient:
             if isinstance(self.sf, list):
                 device_dict['STATUS_FLAGS'].append(self.sf)
             else:
-                device_dict['STATUS_FLAGS'].append([])
+                device_dict['STATUS_FLAGS'].append(['Null', 'Null', 'Null', 'Null'])
         return device_dict
 
     def read_multiple(self):
@@ -57,6 +57,14 @@ class BACnetClient:
                 return self.device
             else:
                 logger.error("FAIL MULTIPLE-READ")
+                idx = -1
+                for i in self.load_data['OBJECT_ID']:
+                    idx += 1
+                    #  print(self.read_result[i][0][1])
+                    self.device["PRESENT_VALUE"].append('Null')
+                    #  print(self.read_result[i][1][1])
+                    self.device["STATUS_FLAGS"].append(['Null', 'Null', 'Null', 'Null'])
+
         except Exception as e:
             logger.exception("FAIL MULTIPLE-READ", e)
             return False
