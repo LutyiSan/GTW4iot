@@ -1,5 +1,5 @@
 from loguru import logger
-from csv_to_dict import get_device_dict
+from csv_to_dict import csv_to_dict
 from BACnet import BACnetClient
 from mqtt import MyMQTT
 from timescale_db import TSDB
@@ -34,9 +34,9 @@ class GTW:
 
     def run_bacnet(self):
         self.bacnet = BACnetClient()
-        for i in DEVICE_CSV:
+        for device in DEVICE_CSV:
             time_control(5, self.bacnet.create(HOST_IP, HOST_PORT))
-            self.device = get_device_dict(i)  # Получаем словарь из csv девайса
+            self.device = csv_to_dict(device, ';')  # Получаем словарь из csv девайса
             if self.device:
                 if GTW_MODE == "bacnet-mqtt-timescaledb" and self.tsdb_create_state:
                     self.tsdb_create_table_state = self.ts.create_table(
@@ -63,7 +63,7 @@ class GTW:
                     # Сохраняем полученые данные в Timescale DB
                     self.sql.put_data(f'{self.device["TOPIC"][1]}', self.reading_data)
             else:
-                logger.info(f"FAIL read csv {i}")
+                logger.info(f"FAIL read csv {device}")
                 self.bacnet.disconnect()
 
     def sent_data(self):
@@ -82,15 +82,18 @@ class GTW:
 
     @staticmethod
     def sign_sf(sf):
-        if sf[0]:
-            sf[0] = 'in-alarm'
-        if sf[1]:
-            sf[1] = 'fault'
-        if sf[2]:
-            sf[2] = 'overridden'
-        if sf[3]:
-            sf[3] = 'is-not-service'
-        return sf
+        if len(sf) == 4:
+            if sf[0]:
+                sf[0] = 'in-alarm'
+            if sf[1]:
+                sf[1] = 'fault'
+            if sf[2]:
+                sf[2] = 'overridden'
+            if sf[3]:
+                sf[3] = 'is-not-service'
+            return sf
+        else:
+            return ['Null', 'Null', 'Null', 'Null']
 
 
 def run():
