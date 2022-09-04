@@ -19,10 +19,10 @@ class BACnetClient:
         try:
             self.client = BAC0.lite(ip=ip_address, port=port)
             logger.debug("READY create bacnet-client")
-            # return True
+            return True
         except Exception as e:
             logger.exception("FAIL create bacnet-client", e)
-        # return False
+            return False
 
     def read_single(self, device_dict):
         signal = -1
@@ -50,9 +50,9 @@ class BACnetClient:
                 idx = -1
                 for i in self.read_result:
                     idx += 1
-                    #  print(self.read_result[i][0][1])
+
                     self.read_dict["PRESENT_VALUE"].append(self.read_result[i][0][1])
-                    #  print(self.read_result[i][1][1])
+
                     self.read_dict["STATUS_FLAGS"].append(self.read_result[i][1][1])
 
                     logger.debug(f"{device_dict['DEVICE_IP'][0]} {i[0]}: {i[1]} {self.read_result[i][0][0]}:"
