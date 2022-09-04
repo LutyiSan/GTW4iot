@@ -19,10 +19,10 @@ class BACnetClient:
         try:
             self.client = BAC0.lite(ip=ip_address, port=port)
             logger.debug("READY create bacnet-client")
-            return True
+            # return True
         except Exception as e:
             logger.exception("FAIL create bacnet-client", e)
-            return False
+        # return False
 
     def read_single(self, device_dict):
         signal = -1
@@ -46,25 +46,21 @@ class BACnetClient:
         _rpm = self.rpm_maker(device_dict)
         try:
             self.read_result = self.client.readMultiple(f'{self.read_dict["DEVICE_IP"][1]}/24', request_dict=_rpm)
-            if len(self.read_result) > 1:
+            if len(self.read_result) == len(_rpm['objects']):
                 idx = -1
                 for i in self.read_result:
                     idx += 1
-
+                    #  print(self.read_result[i][0][1])
                     self.read_dict["PRESENT_VALUE"].append(self.read_result[i][0][1])
-
+                    #  print(self.read_result[i][1][1])
                     self.read_dict["STATUS_FLAGS"].append(self.read_result[i][1][1])
 
-                    logger.debug(f"{device_dict['DEVICE_IP'][0]} {i[0]}: {i[1]} {self.read_result[i][0][0]}:"
-                                 f" pv={self.read_result[i][0][1]} sf={self.read_result[i][1][1]}")
+                    logger.debug(
+                        f"{device_dict['DEVICE_IP'][0]} {i[0]}: {i[1]} {self.read_result[i][0][0]}: pv={self.read_result[i][0][1]} sf={self.read_result[i][1][1]}")
+
                 return self.read_dict
             else:
-                idx = -1
-                while idx < len(self.read_dict["OBJECT_ID"]) - 1:
-                    idx += 1
-                    self.read_dict["PRESENT_VALUE"][idx] = "fault"
-                    self.read_dict["STATUS_FLAGS"][idx] = [0,1,0,0]
-                return self.read_dict
+                logger.error("FAIL MULTIPLE-READ")
         except Exception as e:
             logger.exception("FAIL MULTIPLE-READ", e)
             return False
@@ -107,8 +103,8 @@ class BACnetClient:
                 read_result = self.read_multiple(self.load_data)
                 if isinstance(read_result, dict):
                     self.insert_pv(read_result)
-            cicle = (time.time() - start)
-            print(f'Cicle time {cicle} sec')
+            cycle = (time.time() - start)
+            print(f'Cycle time {cycle} sec')
             return self.pack_dict
         elif len(device_dict['OBJECT_ID']) == self.len_request:
             return device_dict
@@ -167,4 +163,5 @@ class BACnetClient:
 
     def disconnect(self):
         self.client.disconnect()
+
 
