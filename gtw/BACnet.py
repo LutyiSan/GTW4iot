@@ -66,8 +66,6 @@ class BACnetClient:
         self.device['STATUS_FLAGS'] = []
         start = time.time()
         self.len_request = MILTIREAD_LENGTH
-        self.pack_dict = {"OBJECT_TYPE": [], "OBJECT_ID": [], 'PRESENT_VALUE': [], 'STATUS_FLAGS': [],
-                          'OBJECT_NAME': []}
         if MILTIREAD_LENGTH > len(self.device['OBJECT_ID']):
             self.len_request = len(self.device['OBJECT_ID'])
         elif len(self.device['OBJECT_ID']) > self.len_request:
@@ -98,6 +96,7 @@ class BACnetClient:
             return self.pack_dict
 
     def insert_pv(self, read_result):
+        self.pack_dict = {'PRESENT_VALUE': [], 'STATUS_FLAGS': [], 'OBJECT_NAME': []}
         self.pack_dict["PRESENT_VALUE"] += read_result['PRESENT_VALUE']
         self.pack_dict["STATUS_FLAGS"] += read_result['STATUS_FLAGS']
         self.pack_dict["OBJECT_NAME"] += read_result["OBJECT_NAME"]

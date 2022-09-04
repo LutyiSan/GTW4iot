@@ -48,15 +48,13 @@ class GTW:
 
     def sent_data(self):
         sent_data = dict.fromkeys(self.reading_data['OBJECT_NAME'])
-
         idx = -1
         for i in sent_data:
             idx += 1
             sfs = GTW.sign_sf(self.reading_data['STATUS_FLAGS'][idx])
-
             sent_data[i] = [self.reading_data['PRESENT_VALUE'][idx], sfs]
         for v in sent_data:
-            logger.info(f"TO MQTT {v} -  present-value: {sent_data[v][0]} status-flags: {sent_data[v][1]} ")
+            logger.info(f"Send to MQTT {v} -  present-value: {sent_data[v][0]} status-flags: {sent_data[v][1]} ")
         if self.mqttclient.connect(BROKER, BROKER_PORT):
             self.mqttclient.send(f'{TOPIC}/{self.device["TOPIC"][1]}', sent_data)
 
