@@ -2,8 +2,6 @@ from loguru import logger
 from csv_to_dict import csv_to_dict
 from BACnet import BACnetClient
 from mqtt import MyMQTT
-from timescale_db import TSDB
-from sql_db import MySQL
 import multiprocessing
 from env import *
 
@@ -24,44 +22,26 @@ def time_control(period, func):
 
 
 class GTW:
-    def __init__(self):
-        if GTW_MODE == "bacnet-mqtt-timescaledb":
-            self.tsdb_create_state = self.ts = TSDB()
-        elif GTW_MODE == "bacnet-mqtt-sqlite3":
-            self.sql = MySQL()
-        self.mqttclient = MyMQTT()
-        self.mqtt_create_state = self.mqttclient.create(USER_NAME, USE_PASSWD)
 
     def run_bacnet(self):
         self.bacnet = BACnetClient()
         for device in DEVICE_CSV:
-            time_control(5, self.bacnet.create(HOST_IP, HOST_PORT))
             self.device = csv_to_dict(device, ';')  # Получаем словарь из csv девайса
             if self.device:
-                if GTW_MODE == "bacnet-mqtt-timescaledb" and self.tsdb_create_state:
-                    self.tsdb_create_table_state = self.ts.create_table(
-                        f'{self.device["TOPIC"][1]}')  # Создаем таблицу девайса в Timescale DB
-                elif GTW_MODE == "bacnet-mqtt-sqlite3":
-                    if self.sql.connect(DB_NAME):
-                        self.sql.create_table(f'{self.device["TOPIC"][1]}')  # Создаем таблицу девайса в SQLITE3
-                    # Опрашиваем девайс
+                time_control(5, self.bacnet.create(HOST_IP, self.device['PORT'][0]))
+                # Опрашиваем девайс
                 if MILTIREAD_LENGTH > 1:
                     self.reading_data = self.bacnet.read_load(self.device)
                     self.bacnet.disconnect()
                 else:
                     self.reading_data = self.bacnet.read_single(self.device)
                     self.bacnet.disconnect()
+                self.mqttclient = MyMQTT()
+                self.mqtt_create_state = self.mqttclient.create(USER_NAME, USE_PASSWD)
                 if self.mqtt_create_state:
                     self.sent_data()
                 else:
                     logger.error(f"MQTT Client not created")
-
-                if GTW_MODE == "bacnet-mqtt-timescaledb" and self.tsdb_create_state:
-                    # Сохраняем полученые данные в Timescale DB
-                    self.ts.put_data(f'{self.device["TOPIC"][1]}', self.reading_data)
-                elif GTW_MODE == "bacnet-mqtt-sqlite3":
-                    # Сохраняем полученые данные в Timescale DB
-                    self.sql.put_data(f'{self.device["TOPIC"][1]}', self.reading_data)
             else:
                 logger.info(f"FAIL read csv {device}")
                 self.bacnet.disconnect()
