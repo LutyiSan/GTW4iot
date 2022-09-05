@@ -33,11 +33,11 @@ class BACnetClient:
             if isinstance(self.pv, (str, int, float)):
                 device_dict['PRESENT_VALUE'][signal] = self.pv
             else:
-                device_dict['PRESENT_VALUE'][signal] = "Null"
+                device_dict['PRESENT_VALUE'][signal] = None
             if isinstance(self.sf, list):
                 device_dict['STATUS_FLAGS'].append(self.sf)
             else:
-                device_dict['STATUS_FLAGS'].append(['Null', 'Null', 'Null', 'Null'])
+                device_dict['STATUS_FLAGS'].append([None])
         return device_dict
 
     def read_multiple(self):
@@ -51,7 +51,12 @@ class BACnetClient:
                 #    print(self.read_result[i][0][1])
                     idx += 1
                     #  print(self.read_result[i][0][1])
-                    self.device["PRESENT_VALUE"].append(self.read_result[i][0][1])
+                    if self.read_result[i][0][1] == 'active':
+                        self.device["PRESENT_VALUE"].append(True)
+                    elif self.read_result[i][0][1] == 'inactive':
+                        self.device["PRESENT_VALUE"].append(False)
+                    else:
+                        self.device["PRESENT_VALUE"].append(self.read_result[i][0][1])
                     #  print(self.read_result[i][1][1])
                     self.device["STATUS_FLAGS"].append(self.read_result[i][1][1])
                     logger.debug(f"{self.device['DEVICE_IP'][0]} {i[0]}: {i[1]} {self.read_result[i][0][0]}:"
@@ -64,9 +69,9 @@ class BACnetClient:
                 for i in self.load_data['OBJECT_ID']:
                     idx += 1
                     #  print(self.read_result[i][0][1])
-                    self.device["PRESENT_VALUE"].append('Null')
+                    self.device["PRESENT_VALUE"].append(None)
                     #  print(self.read_result[i][1][1])
-                    self.device["STATUS_FLAGS"].append(['Null', 'Null', 'Null', 'Null'])
+                    self.device["STATUS_FLAGS"].append([None])
 
                 return self.device
 
