@@ -28,13 +28,14 @@ class GTW:
         for device in DEVICE_CSV:
             self.device = csv_to_dict(device, ';')  # Получаем словарь из csv девайса
             if self.device:
-                time_control(5, self.bacnet.create(HOST_IP, self.device['PORT'][0]))
+                time_control(5, self.bacnet.create(HOST_IP, HOST_PORT))
                 # Опрашиваем девайс
                 if MILTIREAD_LENGTH > 1:
                     self.reading_data = self.bacnet.read_load(self.device)
                     self.bacnet.disconnect()
                 else:
                     self.reading_data = self.bacnet.read_single(self.device)
+                  #  print(self.reading_data['PRESENT_VALUE'])
                     self.bacnet.disconnect()
                 self.mqttclient = MyMQTT()
                 self.mqtt_create_state = self.mqttclient.create(USER_NAME, USE_PASSWD)
@@ -52,6 +53,7 @@ class GTW:
         for i in sent_data:
             idx += 1
             sfs = GTW.sign_sf(self.reading_data['STATUS_FLAGS'][idx])
+
             sent_data[i] = [self.reading_data['PRESENT_VALUE'][idx], sfs]
         for v in sent_data:
             logger.info(f"Send to MQTT {v} -  present-value: {sent_data[v][0]} status-flags: {sent_data[v][1]} ")
@@ -61,13 +63,13 @@ class GTW:
     @staticmethod
     def sign_sf(sf):
         if len(sf) == 4:
-            if sf[0]:
+            if sf[0] and sf[0] != 'Null':
                 sf[0] = 'in-alarm'
-            if sf[1]:
+            if sf[1] and sf[1] != 'Null':
                 sf[1] = 'fault'
-            if sf[2]:
+            if sf[2] and sf[2] != 'Null':
                 sf[2] = 'overridden'
-            if sf[3]:
+            if sf[3] and sf[3] != 'Null':
                 sf[3] = 'is-not-service'
             return sf
         else:
