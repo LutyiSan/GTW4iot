@@ -33,7 +33,7 @@ class Validator:
 
     def check_csv_data(self, check_data):
         self.check_ip(check_data['DEVICE_IP'][0])
-        self.check_port(check_data['PORT'][0])
+      #  self.check_port(check_data['PORT'][0])
         self.check_id(check_data['DEVICE_ID'])
         self.check_object_type(check_data['OBJECT_TYPE'])
         self.check_id(check_data['OBJECT_ID'])
