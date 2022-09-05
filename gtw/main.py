@@ -38,7 +38,7 @@ class GTW:
                     self.bacnet.disconnect()
                 self.mqttclient = MyMQTT()
                 self.mqtt_create_state = self.mqttclient.create(USER_NAME, USE_PASSWD)
-                if self.mqtt_create_state:
+                if self.mqtt_create_state and self.reading_data :
                     self.sent_data()
                 else:
                     logger.error(f"MQTT Client not created")
@@ -81,4 +81,4 @@ def run():
 
 
 if __name__ == '__main__':
-    run()
+    run
