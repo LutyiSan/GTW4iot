@@ -63,7 +63,8 @@ class BACnetClient:
                     #  print(self.read_result[i][0][1])
                     self.device["PRESENT_VALUE"].append('Null')
                     #  print(self.read_result[i][1][1])
-                    self.device["STATUS_FLAGS"].append(['Null', 'Null', 'Null', 'Null'])
+                    self.device["STATUS_FLAGS"].append(['Null', 'Null', 'Null', 'Null']
+                return self.device
 
         except Exception as e:
             logger.exception("FAIL MULTIPLE-READ", e)
