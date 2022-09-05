@@ -47,6 +47,8 @@ class BACnetClient:
             if len(self.read_result) == len(_rpm['objects']):
                 idx = -1
                 for i in self.read_result:
+                    print(i)
+                    print(self.read_result[i][0][1])
                     idx += 1
                     #  print(self.read_result[i][0][1])
                     self.device["PRESENT_VALUE"].append(self.read_result[i][0][1])
@@ -54,6 +56,7 @@ class BACnetClient:
                     self.device["STATUS_FLAGS"].append(self.read_result[i][1][1])
                     logger.debug(f"{self.device['DEVICE_IP'][0]} {i[0]}: {i[1]} {self.read_result[i][0][0]}:"
                                  f" pv={self.read_result[i][0][1]} sf={self.read_result[i][1][1]}")
+                # print(self.device)
                 return self.device
             else:
                 logger.error("FAIL MULTIPLE-READ")
@@ -63,7 +66,8 @@ class BACnetClient:
                     #  print(self.read_result[i][0][1])
                     self.device["PRESENT_VALUE"].append('Null')
                     #  print(self.read_result[i][1][1])
-                    self.device["STATUS_FLAGS"].append(['Null', 'Null', 'Null', 'Null']
+                    self.device["STATUS_FLAGS"].append(['Null', 'Null', 'Null', 'Null'])
+
                 return self.device
 
         except Exception as e:
@@ -71,8 +75,10 @@ class BACnetClient:
             return False
 
     def read_load(self, device_dict):
+        self.pack_dict = {'PRESENT_VALUE': [], 'STATUS_FLAGS': [], 'OBJECT_NAME': []}
         self.device = device_dict
         self.device['STATUS_FLAGS'] = []
+        self.device['PRESENT_VALUE'] = []
         start = time.time()
         self.len_request = MILTIREAD_LENGTH
         if MILTIREAD_LENGTH > len(self.device['OBJECT_ID']):
@@ -87,28 +93,24 @@ class BACnetClient:
                 s += 1
                 if s == 1:
                     self.slicer(s)
-                    read_result = self.read_multiple()
-                    if isinstance(read_result, dict):
-                        self.insert_pv(read_result)
+                    self.read_multiple()
                 else:
                     self.slicer(s)
-                    read_result = self.read_multiple()
-                    if isinstance(read_result, dict):
-                        self.insert_pv(read_result)
+                    self.read_multiple()
             if self.last_segment > 0:
                 self.slicer(0)
-                read_result = self.read_multiple()
-                if isinstance(read_result, dict):
-                    self.insert_pv(read_result)
+                self.read_multiple()
+                if isinstance(self.device, dict):
+                    self.insert_pv()
             cycle = (time.time() - start)
             print(f'Cycle time {cycle} sec')
+            self.insert_pv()
             return self.pack_dict
 
-    def insert_pv(self, read_result):
-        self.pack_dict = {'PRESENT_VALUE': [], 'STATUS_FLAGS': [], 'OBJECT_NAME': []}
-        self.pack_dict["PRESENT_VALUE"] += read_result['PRESENT_VALUE']
-        self.pack_dict["STATUS_FLAGS"] += read_result['STATUS_FLAGS']
-        self.pack_dict["OBJECT_NAME"] += read_result["OBJECT_NAME"]
+    def insert_pv(self):
+        self.pack_dict["OBJECT_NAME"] = self.device["OBJECT_NAME"]
+        self.pack_dict["PRESENT_VALUE"] = self.device['PRESENT_VALUE']
+        self.pack_dict["STATUS_FLAGS"] += self.device['STATUS_FLAGS']
 
     def slicer(self, s):
         if s == 1:
@@ -138,3 +140,4 @@ class BACnetClient:
 
     def disconnect(self):
         self.client.disconnect()
+
