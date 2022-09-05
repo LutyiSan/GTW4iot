@@ -124,4 +124,4 @@ class Validator:
         else:
             return False
 
-print(csv_to_dict('device_109.csv',';'))
+
