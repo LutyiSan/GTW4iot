@@ -61,13 +61,13 @@ class GTW:
     @staticmethod
     def sign_sf(sf):
         if len(sf) == 4:
-            if sf[0]:
+            if sf[0] and sf[0] != "Null":
                 sf[0] = 'in-alarm'
-            if sf[1]:
+            if sf[1] and sf[0] != "Null":
                 sf[1] = 'fault'
-            if sf[2]:
+            if sf[2] and sf[0] != "Null":
                 sf[2] = 'overridden'
-            if sf[3]:
+            if sf[3] and sf[0] != "Null":
                 sf[3] = 'is-not-service'
             return sf
         else:
