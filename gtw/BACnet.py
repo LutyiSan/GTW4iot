@@ -117,10 +117,9 @@ class BACnetClient:
             self.load_data["OBJECT_TYPE"] = self.device['OBJECT_TYPE'][0:self.len_request]
             self.load_data["OBJECT_ID"] = self.device['OBJECT_ID'][0:self.len_request]
         elif s == 0:
-            self.load_data["OBJECT_TYPE"] = self.device['OBJECT_TYPE'][
-                                            self.len_request * s:self.len_request * s + self.last_segment]
-            self.load_data["OBJECT_ID"] = self.device['OBJECT_ID'][
-                                          self.len_request * s:self.len_request * s + self.last_segment]
+            self.load_data["OBJECT_TYPE"] = self.device['OBJECT_TYPE'][-self.last_segment:]
+            # print("last segment",self.device['OBJECT_TYPE'][-self.last_segment:])
+            self.load_data["OBJECT_ID"] = self.device['OBJECT_ID'][-self.last_segment:]
         else:
             self.load_data["OBJECT_TYPE"] = self.device['OBJECT_TYPE'][self.len_request * (s - 1):self.len_request * s]
             self.load_data["OBJECT_ID"] = self.device['OBJECT_ID'][self.len_request * (s - 1):self.len_request * s]
@@ -140,4 +139,3 @@ class BACnetClient:
 
     def disconnect(self):
         self.client.disconnect()
-
