@@ -28,7 +28,7 @@ class GTW:
         for device in DEVICE_CSV:
             self.device = csv_to_dict(device, ';')  # Получаем словарь из csv девайса
             if self.device:
-                time_control(5, self.bacnet.create(HOST_IP, HOST_PORT))
+                time_control(5, self.bacnet.create(HOST_IP, self.device['PORT'][0]))
                 # Опрашиваем девайс
                 if MILTIREAD_LENGTH > 1:
                     self.reading_data = self.bacnet.read_load(self.device)

@@ -47,8 +47,8 @@ class BACnetClient:
             if len(self.read_result) == len(_rpm['objects']):
                 idx = -1
                 for i in self.read_result:
-                    print(i)
-                    print(self.read_result[i][0][1])
+                 #   print(i)
+                #    print(self.read_result[i][0][1])
                     idx += 1
                     #  print(self.read_result[i][0][1])
                     self.device["PRESENT_VALUE"].append(self.read_result[i][0][1])
@@ -83,29 +83,26 @@ class BACnetClient:
         self.len_request = MILTIREAD_LENGTH
         if MILTIREAD_LENGTH > len(self.device['OBJECT_ID']):
             self.len_request = len(self.device['OBJECT_ID'])
-        elif len(self.device['OBJECT_ID']) > self.len_request:
-            self.len_signals = len(self.device['OBJECT_ID'])
-            self.load_data = dict()
-            segments = self.len_signals // self.len_request
-            self.last_segment = self.len_signals % self.len_request
-            s = 0
-            while s < segments:
-                s += 1
-                if s == 1:
-                    self.slicer(s)
-                    self.read_multiple()
-                else:
-                    self.slicer(s)
-                    self.read_multiple()
-            if self.last_segment > 0:
-                self.slicer(0)
+
+        self.len_signals = len(self.device['OBJECT_ID'])
+        self.load_data = dict()
+        segments = self.len_signals // self.len_request
+        self.last_segment = self.len_signals % self.len_request
+        s = 0
+        while s < segments:
+            s += 1
+            if s == 1:
+                self.slicer(s)
                 self.read_multiple()
-                if isinstance(self.device, dict):
-                    self.insert_pv()
-            cycle = (time.time() - start)
-            print(f'Cycle time {cycle} sec')
-            self.insert_pv()
-            return self.pack_dict
+            else:
+                self.slicer(s)
+                self.read_multiple()
+        if self.last_segment > 0:
+            self.slicer(0)
+            self.read_multiple()
+        cycle = (time.time() - start)
+        print(f'Cycle time {cycle} sec')
+        return self.device
 
     def insert_pv(self):
         self.pack_dict["OBJECT_NAME"] = self.device["OBJECT_NAME"]
