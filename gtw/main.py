@@ -44,7 +44,7 @@ class GTW:
                     logger.error(f"MQTT Client not created")
             else:
                 logger.info(f"FAIL read csv {device}")
-                self.bacnet.disconnect()
+           #     self.bacnet.disconnect()
 
     def sent_data(self):
         sent_data = dict.fromkeys(self.reading_data['OBJECT_NAME'])
