@@ -40,32 +40,21 @@ class BACnetClient:
         try:
             self.read_result = self.client.readMultiple(f'{self.device["DEVICE_IP"][0]}/24', request_dict=_rpm)
             if len(self.read_result) == len(_rpm['objects']):
-                idx = -1
                 for i in self.read_result:
-                    #   print(i)
-                    #    print(self.read_result[i][0][1])
-                    idx += 1
-                    #  print(self.read_result[i][0][1])
                     if self.read_result[i][0][1] == 'active':
                         self.device["PRESENT_VALUE"].append(True)
                     elif self.read_result[i][0][1] == 'inactive':
                         self.device["PRESENT_VALUE"].append(False)
                     else:
                         self.device["PRESENT_VALUE"].append(self.read_result[i][0][1])
-                    #  print(self.read_result[i][1][1])
                     self.device["STATUS_FLAGS"].append(self.read_result[i][1][1])
                     logger.debug(f"{self.device['DEVICE_IP'][0]} {i[0]}: {i[1]} {self.read_result[i][0][0]}:"
                                  f" pv={self.read_result[i][0][1]} sf={self.read_result[i][1][1]}")
-                # print(self.device)
                 return self.device
             else:
                 logger.error("FAIL MULTIPLE-READ")
-                idx = -1
-                for i in self.load_data['OBJECT_ID']:
-                    idx += 1
-                    #  print(self.read_result[i][0][1])
+                for _ in self.load_data['OBJECT_ID']:
                     self.device["PRESENT_VALUE"].append(None)
-                    #  print(self.read_result[i][1][1])
                     self.device["STATUS_FLAGS"].append([None])
 
                 return self.device
