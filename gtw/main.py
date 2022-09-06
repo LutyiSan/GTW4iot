@@ -1,4 +1,5 @@
 from loguru import logger
+import time
 from csv_to_dict import csv_to_dict
 from BACnet import BACnetClient
 from mqtt import MyMQTT
@@ -54,14 +55,15 @@ class GTW:
                     else:
                         self.reading_data = self.bacnet.read_single(device)
                         self.bacnet.disconnect()
-                self.mqttclient = MyMQTT()
-                self.mqtt_create_state = self.mqttclient.create(USER_NAME, USE_PASSWD)
-                if self.mqtt_create_state:
-                    self.sent_data(device)
+                    self.mqttclient = MyMQTT()
+                    self.mqtt_create_state = self.mqttclient.create(USER_NAME, USE_PASSWD)
+                    if self.mqtt_create_state:
+                        self.sent_data(device)
+                    else:
+                        logger.error(f"FAIL MQTT Client created")
                 else:
-                    logger.error(f"FAIL MQTT Client created")
-            else:
-                logger.error(f"FAIL BACnet Client not created")
+                    logger.error(f"FAIL BACnet Client not created")
+                time.sleep(1)
         else:
             logger.info(f"FAIL read from env.DEVICE_LIST")
 
