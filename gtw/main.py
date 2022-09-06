@@ -2,47 +2,40 @@ from loguru import logger
 from csv_to_dict import csv_to_dict
 from BACnet import BACnetClient
 from mqtt import MyMQTT
-import multiprocessing
+
 from env import *
-
-
-def time_control(period, func):
-    run_time = multiprocessing.Process(target=func)
-    run_time.start()
-    # Wait for 10 seconds or until process finishes
-    run_time.join(period)
-    # If thread is still active
-    if run_time.is_alive():
-        # print("running... before changed values...")
-        # Terminate - may not work if process is stuck for good
-        run_time.terminate()
-        # OR Kill - will work for sure, no chance for process to finish nicely however
-        # p.kill()
-        run_time.join()
 
 
 class GTW:
 
     def run_bacnet(self):
+        bc_state = False
         self.bacnet = BACnetClient()
         for device in DEVICE_CSV:
             self.device = csv_to_dict(device, ';')  # Получаем словарь из csv девайса
             if self.device:
-                time_control(5, self.bacnet.create(HOST_IP, self.device['PORT'][0]))
-                # Опрашиваем девайс
-                if MILTIREAD_LENGTH > 1:
-                    self.reading_data = self.bacnet.read_load(self.device)
-                    self.bacnet.disconnect()
+                try:
+                    self.bacnet.create(HOST_IP, self.device['PORT'][0])
+                    bc_state = True
+                except Exception as e:
+                    logger.error(e)
+                if bc_state:
+                    # Опрашиваем девайс
+                    if MILTIREAD_LENGTH > 1:
+                        self.reading_data = self.bacnet.read_load(self.device)
+                        self.bacnet.disconnect()
+                    else:
+                        self.reading_data = self.bacnet.read_single(self.device)
+                        #  print(self.reading_data['PRESENT_VALUE'])
+                        self.bacnet.disconnect()
+                    self.mqttclient = MyMQTT()
+                    self.mqtt_create_state = self.mqttclient.create(USER_NAME, USE_PASSWD)
+                    if self.mqtt_create_state:
+                        self.sent_data()
+                    else:
+                        logger.error(f"FAIL MQTT Client created")
                 else:
-                    self.reading_data = self.bacnet.read_single(self.device)
-                  #  print(self.reading_data['PRESENT_VALUE'])
-                    self.bacnet.disconnect()
-                self.mqttclient = MyMQTT()
-                self.mqtt_create_state = self.mqttclient.create(USER_NAME, USE_PASSWD)
-                if self.mqtt_create_state:
-                    self.sent_data()
-                else:
-                    logger.error(f"MQTT Client not created")
+                    logger.error(f"FAIL BACnet Client not created")
             else:
                 logger.info(f"FAIL read csv {device}")
                 self.bacnet.disconnect()

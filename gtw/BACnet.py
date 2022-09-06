@@ -1,6 +1,7 @@
 import BAC0
 from loguru import logger
 import time
+
 from env import MILTIREAD_LENGTH
 
 
@@ -9,6 +10,7 @@ class BACnetClient:
     def create(self, ip_address, port):
         try:
             self.client = BAC0.lite(ip=ip_address, port=port)
+            # time.sleep(4)
             logger.debug("READY create bacnet-client")
             # return True
         except Exception as e:
@@ -47,8 +49,8 @@ class BACnetClient:
             if len(self.read_result) == len(_rpm['objects']):
                 idx = -1
                 for i in self.read_result:
-                 #   print(i)
-                #    print(self.read_result[i][0][1])
+                    #   print(i)
+                    #    print(self.read_result[i][0][1])
                     idx += 1
                     #  print(self.read_result[i][0][1])
                     if self.read_result[i][0][1] == 'active':
