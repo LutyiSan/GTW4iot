@@ -1,4 +1,4 @@
-import BAC0
+from BAC0.scripts.Lite import Lite
 from loguru import logger
 import time
 
@@ -8,7 +8,7 @@ from env import MILTIREAD_LENGTH
 class BACnetClient:
 
     def create(self, ip_address, port):
-        self.client = BAC0.lite(ip=ip_address, port=port)
+        self.client = Lite(ip=ip_address, port=port)
 
     def read_single(self, device_dict):
         device_dict['STATUS_FLAGS'] = []

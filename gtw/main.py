@@ -3,6 +3,7 @@ import time
 from csv_to_dict import csv_to_dict
 from BACnet import BACnetClient
 from mqtt import MyMQTT
+from TimeOut import timeout
 from env import *
 
 
@@ -42,11 +43,12 @@ class GTW:
             self.bacnet = BACnetClient()
             for device in self.poll_devices:
                 try:
-                    self.bacnet.create(HOST_IP, device['PORT'][0])
-                    bc_state = True
-                    logger.debug("READY create bacnet-client")
-                except Exception as e:
-                    logger.exception("FAIL create bacnet-client", e)
+                    with timeout(seconds=5):
+                        self.bacnet.create(HOST_IP, device['PORT'][0])
+                        bc_state = True
+                        logger.debug("READY create bacnet-client")
+                except TimeoutError as te:
+                    logger.exception("FAIL create bacnet-client", te)
                 if bc_state:
                     if MILTIREAD_LENGTH > 1:
                         logger.debug(f"READING from device {device['DEVICE_IP'][0]} : {device['PORT'][0]}")

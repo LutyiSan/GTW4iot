@@ -1,3 +1,4 @@
 loguru~=0.6.0
 paho-mqtt~=1.6.1
 BAC0~=21.12.3
+pytz
