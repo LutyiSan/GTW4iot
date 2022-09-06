@@ -8,14 +8,7 @@ from env import MILTIREAD_LENGTH
 class BACnetClient:
 
     def create(self, ip_address, port):
-        try:
-            self.client = BAC0.lite(ip=ip_address, port=port)
-            # time.sleep(4)
-            logger.debug("READY create bacnet-client")
-            # return True
-        except Exception as e:
-            logger.exception("FAIL create bacnet-client", e)
-        # return False
+        self.client = BAC0.lite(ip=ip_address, port=port)
 
     def read_single(self, device_dict):
         device_dict['STATUS_FLAGS'] = []

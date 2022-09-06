@@ -17,8 +17,9 @@ class GTW:
                 try:
                     self.bacnet.create(HOST_IP, self.device['PORT'][0])
                     bc_state = True
+                    logger.debug("READY create bacnet-client")
                 except Exception as e:
-                    logger.error(e)
+                    logger.exception("FAIL create bacnet-client", e)
                 if bc_state:
                     # Опрашиваем девайс
                     if MILTIREAD_LENGTH > 1:
