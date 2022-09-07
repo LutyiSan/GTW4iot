@@ -3,7 +3,6 @@ import time
 from csv_to_dict import csv_to_dict
 from BACnet import BACnetClient
 from mqtt import MyMQTT
-from TimeOut import timeout
 from env import *
 
 
@@ -36,27 +35,18 @@ def get_devices():
 
 
 class GTW:
-    def run_bacnet(self):
-        self.poll_devices = get_devices()
+    def run_bacnet(self,device_list):
+        self.poll_devices = device_list
         if self.poll_devices:
-            bc_state = False
             self.bacnet = BACnetClient()
             for device in self.poll_devices:
-                try:
-                    with timeout(seconds=5):
-                        self.bacnet.create(HOST_IP, device['PORT'][0])
-                        bc_state = True
-                        logger.debug("READY create bacnet-client")
-                except TimeoutError as te:
-                    logger.exception("FAIL create bacnet-client", te)
+                bc_state = self.bacnet.create(HOST_IP, device['PORT'][0])
                 if bc_state:
                     if MILTIREAD_LENGTH > 1:
                         logger.debug(f"READING from device {device['DEVICE_IP'][0]} : {device['PORT'][0]}")
                         self.reading_data = self.bacnet.read_load(device)
-                        self.bacnet.disconnect()
                     else:
                         self.reading_data = self.bacnet.read_single(device)
-                        self.bacnet.disconnect()
                     self.mqttclient = MyMQTT()
                     self.mqtt_create_state = self.mqttclient.create(USER_NAME, USE_PASSWD)
                     if self.mqtt_create_state:
@@ -82,8 +72,9 @@ class GTW:
 
 def run():
     gtw = GTW()
+    device_list = get_devices()
     while True:
-        gtw.run_bacnet()
+        gtw.run_bacnet(device_list)
 
 
 if __name__ == '__main__':

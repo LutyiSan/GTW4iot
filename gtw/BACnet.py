@@ -8,32 +8,44 @@ from env import MILTIREAD_LENGTH
 class BACnetClient:
 
     def create(self, ip_address, port):
-        self.client = Lite(ip=ip_address, port=port)
+        try:
+            self.client = Lite(ip=ip_address, port=port)
+            logger.debug("READY create bacnet-client")
+            return True
+        except Exception as ex:
+            logger.exception("FAIL create bacnet-client", ex)
+            return False
 
     def read_single(self, device_dict):
         device_dict['STATUS_FLAGS'] = []
         signal = -1
-        while signal < (len(device_dict['OBJECT_ID']) - 1):
-            signal += 1
-            try:
-                self.pv = self.client.read(f'{device_dict["DEVICE_IP"][0]}/24 {device_dict["OBJECT_TYPE"][signal]}'
-                                           f' {device_dict["OBJECT_ID"][signal]} presentValue')
-                self.sf = self.client.read(f'{device_dict["DEVICE_IP"][0]}/24 {device_dict["OBJECT_TYPE"][signal]}'
-                                           f' {device_dict["OBJECT_ID"][signal]} statusFlags')
-                logger.debug(f'READ OK {device_dict["DEVICE_IP"][0]} {device_dict["OBJECT_TYPE"][signal]}'
-                             f' {device_dict["OBJECT_ID"][signal]} presentValue: {self.pv} statusFlags: {self.sf}')
-            except Exception as e:
-                logger.exception(f'FAIL READ {device_dict["DEVICE_IP"][0]} {device_dict["OBJECT_TYPE"][signal]}'
-                                 f' {device_dict["OBJECT_ID"][signal]}', e)
-            if isinstance(self.pv, (str, int, float)):
-                device_dict['PRESENT_VALUE'][signal] = self.pv
-            else:
-                device_dict['PRESENT_VALUE'][signal] = None
-            if isinstance(self.sf, list):
-                device_dict['STATUS_FLAGS'].append(self.sf)
-            else:
-                device_dict['STATUS_FLAGS'].append([None])
-        return device_dict
+        try:
+            while signal < (len(device_dict['OBJECT_ID']) - 1):
+                signal += 1
+                try:
+                    self.pv = self.client.read(f'{device_dict["DEVICE_IP"][0]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+                                               f' {device_dict["OBJECT_ID"][signal]} presentValue')
+                    self.sf = self.client.read(f'{device_dict["DEVICE_IP"][0]}/24 {device_dict["OBJECT_TYPE"][signal]}'
+                                               f' {device_dict["OBJECT_ID"][signal]} statusFlags')
+                    logger.debug(f'READ OK {device_dict["DEVICE_IP"][0]} {device_dict["OBJECT_TYPE"][signal]}'
+                                 f' {device_dict["OBJECT_ID"][signal]} presentValue: {self.pv} statusFlags: {self.sf}')
+                except Exception as e:
+                    logger.exception(f'FAIL READ {device_dict["DEVICE_IP"][0]} {device_dict["OBJECT_TYPE"][signal]}'
+                                     f' {device_dict["OBJECT_ID"][signal]}', e)
+                if isinstance(self.pv, (str, int, float)):
+                    device_dict['PRESENT_VALUE'][signal] = self.pv
+                else:
+                    device_dict['PRESENT_VALUE'][signal] = None
+                if isinstance(self.sf, list):
+                    device_dict['STATUS_FLAGS'].append(self.sf)
+                else:
+                    device_dict['STATUS_FLAGS'].append([None])
+            self.disconnect()
+            return device_dict
+        except Exception as ex:
+            self.disconnect()
+            logger.exception("FAIL SINGLE-READ", ex)
+            return False
 
     def read_multiple(self):
         _rpm = self.rpm_maker(self.load_data)
@@ -50,15 +62,12 @@ class BACnetClient:
                     self.device["STATUS_FLAGS"].append(self.read_result[i][1][1])
                     logger.debug(f"{self.device['DEVICE_IP'][0]} {i[0]}: {i[1]} {self.read_result[i][0][0]}:"
                                  f" pv={self.read_result[i][0][1]} sf={self.read_result[i][1][1]}")
-                return self.device
             else:
                 logger.error("FAIL MULTIPLE-READ")
                 for _ in self.load_data['OBJECT_ID']:
                     self.device["PRESENT_VALUE"].append(None)
                     self.device["STATUS_FLAGS"].append([None])
-
-                return self.device
-
+            return self.device
         except Exception as e:
             logger.exception("FAIL MULTIPLE-READ", e)
             return False
@@ -72,7 +81,6 @@ class BACnetClient:
         self.len_request = MILTIREAD_LENGTH
         if MILTIREAD_LENGTH > len(self.device['OBJECT_ID']):
             self.len_request = len(self.device['OBJECT_ID'])
-
         self.len_signals = len(self.device['OBJECT_ID'])
         self.load_data = dict()
         segments = self.len_signals // self.len_request
@@ -90,7 +98,8 @@ class BACnetClient:
             self.slicer(0)
             self.read_multiple()
         cycle = (time.time() - start)
-        print(f'Cycle time {cycle} sec')
+        logger.debug(f'Cycle time {cycle} sec')
+        self.disconnect()
         return self.device
 
     def insert_pv(self):

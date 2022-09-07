@@ -1,6 +1,6 @@
 from loguru import logger
 
-PREFIX = "devices/"
+PREFIX = "gtw/devices/"
 
 
 def csv_to_dict(csv_file, csv_delimiter):
