@@ -3,6 +3,7 @@ import time
 from csv_to_dict import csv_to_dict
 from BACnet import BACnetClient
 from mqtt import MyMQTT
+from TimeOut import timeout
 from env import *
 
 
@@ -78,4 +79,5 @@ def run():
 
 
 if __name__ == '__main__':
-    run()
+    while True:
+        timeout(run, 600)

@@ -6,4 +6,4 @@ services:
     volumes:
       - ./gtw:/gtw
     network_mode: host
-    command: bash -c "pip3 install /gtw/requirements.txt && python3 /gtw/main.py"
+    command: bash -c "pip3 install -r /gtw/requirements.txt && python3 /gtw/main.py"
