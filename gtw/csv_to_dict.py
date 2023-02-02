@@ -72,7 +72,7 @@ class Validator:
 
     def check_id(self, check_data):
         for di in check_data:
-            if Validator.validate_digit(di, 1, 4194303):
+            if Validator.validate_digit(di, 0, 4194303):
                 self.state.append(True)
             else:
                 logger.error("column ID must be a digit 0-4194303")
